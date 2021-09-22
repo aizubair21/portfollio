@@ -32,3 +32,8 @@
   font-family: "open-sans-bold";
   src: url("/font/Open_Sans/OpenSans-Bold.ttf");
 }
+
+@font-face {
+  font-family: "anton";
+  src: url("/font/Anton-Regular.ttf");
+}

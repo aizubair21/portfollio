@@ -13,11 +13,10 @@ body {
 #mainBody {
   position: relative;
   width: 80%;
-  height: 80vh;
+  height: 90vh;
   border: 1px solid black;
   z-index: 999;
   margin: 50px auto;
-  overflow: hidden;
   padding: 10px;
 }
 #mainBody .mainOverlay {
@@ -25,8 +24,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  backdrop-filter: blur(10px);
+  height: 89vh;
+  backdrop-filter: blur(20px);
   z-index: -1;
 }
 #mainBody .top-body {
@@ -41,14 +40,18 @@ body {
   padding: 5px;
   margin: 10px 0px;
 }
-#mainBody .top-body img {
-  width: 100%;
-  height: 50px;
+#mainBody .top-body .image {
+  border-radius: 100%;
+}
+#mainBody .top-body .image img {
+  width: 120px;
+  height: 120px;
 }
 #mainBody .top-body .right-content {
   text-align: right;
 }
 #mainBody .top-body .right-content h3 {
+  color: skyblue;
   padding: 0;
   margin: 0;
   font-family: "oswald";
@@ -70,29 +73,112 @@ body {
 }
 #mainBody .bottom-body {
   width: 100%;
-  height: 65vh;
-  border: 1px solid green;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px;
+  background-color: #619de2;
 }
 #mainBody .bottom-body .nav-bar-tab {
   width: 20%;
-  background-color: #ce6969;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 #mainBody .bottom-body .nav-bar-tab ul {
-  padding: 0px 5px;
+  width: 100%;
+  padding: 0 0 0 5px;
 }
 #mainBody .bottom-body .nav-bar-tab ul li {
-  padding: 5px 0px;
+  padding: 5px 5px;
+  margin: 3px 0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 #mainBody .bottom-body .nav-bar-tab ul li a {
-  color: white;
+  color: black;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "roboto";
+}
+#mainBody .bottom-body .nav-bar-tab ul li a i {
+  margin: 5px;
+}
+#mainBody .bottom-body .nav-bar-tab button {
+  padding: 5px ;
+  border: none;
 }
 #mainBody .bottom-body .tab-content {
-  width: 80%;
-  background-color: aqua;
+  width: 79%;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5px;
+}
+#mainBody .bottom-body .tab-content .tab-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: hidden;
+}
+#mainBody .bottom-body .tab-content .tab-item .tab-disc {
+  display: flex;
+  align-items: center;
+}
+#mainBody .bottom-body .tab-content .tab-item .tab-disc h2 {
+  font-size: 50px;
+  font-family: "anton";
+  color: black;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+}
+#mainBody .bottom-body .tab-content .tab-item .tab-disc h3 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+  font-family: "anton";
+  padding: 10px 0px;
+  overflow: hidden;
+  position: relative;
+  background: -webkit-linear-gradient(45deg, skyblue, #b3423a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#mainBody .bottom-body .tab-content .tab-item .tab-disc p {
+  font-size: 25px;
+  font-family: "roboto";
+}
+#mainBody .bottom-body .tab-content .tab-item .tab-disc button {
+  padding: 10px 25px;
+  margin: 10px 0px;
+  font-size: 20px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, skyblue, transparent);
+  transition: linear 1s;
+}
+#mainBody .bottom-body .tab-content .tab-item .tab-disc button:hover {
+  background: linear-gradient(90deg, #b3423a, skyblue);
+}
+#mainBody .bottom-body .tab-content .tab-item .formar-image-one {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  width: 490px;
+  transform: translate(-50%);
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+}
+#mainBody .bottom-body .tab-content .tab-item .formar-image-two {
+  width: 490px;
+  height: 400px;
+  line-height: 10px;
 }
