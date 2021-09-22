@@ -16,6 +16,9 @@
   <!-- fontawesome -->
   <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
 
+  <!-- jQuerry -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -50,37 +53,72 @@
   <div class="bottom-body">
     <div class="nav-bar-tab">
       <ul>
-        <li><a href="#"> <i class="fas fa-home"></i> Home</a></li>
+        <li class=" nav-link active" onclick="openTabContent('home')"><a href="#"> <i class="fas fa-home"></i> Home</a></li>
 
-        <li> <a href="#"> <i class="fas fa-id-card"></i> About Me</a></li>
+        <li class="nav-link" onclick="openTabContent('aboutUs')"> <a href="#"> <i class="fas fa-id-card"></i> About Me</a></li>
 
-        <li><a href="#"> <i class="fas fa-image"></i> Portfollio </a></li>
+        <li class="nav-link" onclick="openTabContent('portfollio')"><a href="#"> <i class="fas fa-image"></i> Portfollio </a></li>
 
-        <li> <a href="#"> <i class="fas fa-pen"></i> Textimonial</a></li>
+        <li class="nav-link" onclick="openTabContent('testimonial')"> <a href="#"> <i class="fas fa-pen"></i> Testimonial</a></li>
 
-        <li> <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
+        <li class="nav-link" onclick="openTabContent('contact')"> <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
         
       </ul>
 
-      <button> Download CV</button>
+      <button> <i class="fas fa-file-alt"></i> View CV</button>
     </div>
+    <div>
 
-    <div class="tab-content">
-      <div class="tab-item frist">
-        <div class="tab-disc">
+      <div id="home" class="tab-content">
+        <div class="tab-item frist">
+          <div class="tab-disc">
+            <div>
+              <h2>Hi, I am </h2>
+              <h3 > <span></span> <span></span> <span></span> A.I Zubair</h3> 
+              <P>Creative Web Designer </P>
+              <button>Download CV</button>
+            </div>
+          </div>
+
           <div>
-            <h2>Hi, I am </h2>
-            <h3 > <span></span> <span></span> <span></span> A.I Zubair</h3> 
-            <P>Creative Web Designer </P>
-            <button>Download CV</button>
+            <img class="formar-image-one" src="image/mirror.png" alt="">
+            <img class="formar-image-two" src="image/portfolio-bg-2.png" alt="">
           </div>
         </div>
+      </div>
 
-        <div>
-          <img class="formar-image-one" src="image/mirror.png" alt="">
-          <img class="formar-image-two" src="image/portfolio-bg-2.png" alt="">
+      <div id="aboutUs" class="tab-content">
+        <div class="top">
+          <h3>Who <span class="green">AM I</span></h3>
+          <div class="d-flex">
+            <div class="left">
+              <p>First, Your already knows me as a <span class="green">"WEB DESIGNER"</span>. But, everyone has own Personality and Charisma. There take a look, about my hobiness and preferences.</p>
+              <p> <i class="fas fa-arrow-alt-circle-right"></i> I love to learn. <br> <i class="fas fa-arrow-alt-circle-right"></i> I am lover, who loves to know. <br> <i class="fas fa-arrow-alt-circle-right"></i> loves to spread his knowledge. <br> <i class="fas fa-arrow-alt-circle-right"></i> loves To learn new thing everyday.</p>
+  
+              <p> <i class="fas fa-paint-brush"></i> Web Designer, <i class="fas fa-pen-alt"></i> Article Writter, <i class="fab fa-wordpress"></i> WordPress Theme Customizer and so one..</p>
+            </div>
+            <div class="right">
+             <div class="d-flex"> <span class="green">Age:</span> 20</div>
+             <div class="d-flex"> <span class="green">Address:</span> Lord Hardinge, Lalmohan, Bhola</div>
+             <div class="d-flex"> <span class="green">Residence:</span> Bhola, Bangladesh</div>
+             <div class="d-flex"> <span class="green">E-mail:</span> aizubair9866@gmail.com </div>
+             <div class="d-flex"> <span class="green">Phone:</span> +88017-98667580 </div>
+            </div>
+          </div>
+
+          <div class="whatICanDo">
+            <div> <i class="fas fa-desktop"> Desktop App Design</i></div>
+            <div> <i class=""></i> </div>
+          </div>
         </div>
       </div>
+
+      <div id="portfollio" class="tab-content">portfollio</div>
+
+      <div id="testimonial" class="tab-content">testimonial</div>
+
+      <div id="contact" class="tab-content">contact</div>
+
     </div>
   </div>
 

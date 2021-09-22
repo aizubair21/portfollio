@@ -97,6 +97,14 @@ body {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
+#mainBody .bottom-body .nav-bar-tab ul li:hover:not(.active) {
+  background: gray;
+  cursor: pointer;
+}
+#mainBody .bottom-body .nav-bar-tab ul li.active {
+  background-color: white;
+  cursor: pointer;
+}
 #mainBody .bottom-body .nav-bar-tab ul li a {
   color: black;
   font-size: 15px;
@@ -109,16 +117,32 @@ body {
   margin: 5px;
 }
 #mainBody .bottom-body .nav-bar-tab button {
-  padding: 5px ;
+  padding: 5px 10px;
   border: none;
+  font-size: 15px;
+  color: #000000;
+  border-radius: 25px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all linear 0.5s;
 }
-#mainBody .bottom-body .tab-content {
+#mainBody .bottom-body .nav-bar-tab button i {
+  padding: 0px 5px;
+}
+#mainBody .bottom-body .nav-bar-tab button:hover {
+  opacity: 1;
+}
+#mainBody .bottom-body div {
   width: 79%;
+}
+#mainBody .bottom-body div .tab-content {
+  width: 100%;
+  display: none;
   border: 1px solid white;
   background-color: white;
   border-radius: 5px;
 }
-#mainBody .bottom-body .tab-content .tab-item {
+#mainBody .bottom-body div .tab-content .tab-item {
   width: 100%;
   height: 100%;
   position: relative;
@@ -127,18 +151,18 @@ body {
   padding: 10px;
   overflow: hidden;
 }
-#mainBody .bottom-body .tab-content .tab-item .tab-disc {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc {
   display: flex;
   align-items: center;
 }
-#mainBody .bottom-body .tab-content .tab-item .tab-disc h2 {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc h2 {
   font-size: 50px;
   font-family: "anton";
   color: black;
   word-spacing: 5px;
   letter-spacing: 5px;
 }
-#mainBody .bottom-body .tab-content .tab-item .tab-disc h3 {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc h3 {
   font-size: 70px;
   text-transform: uppercase;
   font-weight: 600;
@@ -151,11 +175,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#mainBody .bottom-body .tab-content .tab-item .tab-disc p {
-  font-size: 25px;
-  font-family: "roboto";
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc p {
+  font-size: 20px;
+  font-family: "roboto-bold";
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: white;
+  padding: 5px;
+  background: black;
 }
-#mainBody .bottom-body .tab-content .tab-item .tab-disc button {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc button {
   padding: 10px 25px;
   margin: 10px 0px;
   font-size: 20px;
@@ -165,10 +194,10 @@ body {
   background: linear-gradient(90deg, skyblue, transparent);
   transition: linear 1s;
 }
-#mainBody .bottom-body .tab-content .tab-item .tab-disc button:hover {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc button:hover {
   background: linear-gradient(90deg, #b3423a, skyblue);
 }
-#mainBody .bottom-body .tab-content .tab-item .formar-image-one {
+#mainBody .bottom-body div .tab-content .tab-item .formar-image-one {
   position: absolute;
   bottom: 0;
   right: 40px;
@@ -177,8 +206,49 @@ body {
   box-sizing: border-box;
   transform: rotateY(180deg);
 }
-#mainBody .bottom-body .tab-content .tab-item .formar-image-two {
+#mainBody .bottom-body div .tab-content .tab-item .formar-image-two {
   width: 490px;
   height: 400px;
   line-height: 10px;
+}
+#mainBody .bottom-body div #aboutUs .top {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+#mainBody .bottom-body div #aboutUs .top h3 {
+  width: 100%;
+  font-size: 25px;
+  padding: 10px 0;
+  font-family: "oswald";
+  font-weight: 600;
+}
+#mainBody .bottom-body div #aboutUs .top div {
+  width: 100%;
+}
+#mainBody .bottom-body div #aboutUs .top div .left p {
+  font-size: 15px;
+  margin: 10px 0px;
+  font-family: "open-sans-bold";
+  text-transform: uppercase;
+}
+#mainBody .bottom-body div #aboutUs .top div .left .fas,
+#mainBody .bottom-body div #aboutUs .top div .left .fab {
+  color: green;
+}
+#mainBody .bottom-body div #aboutUs .top div .right {
+  padding: 0 50px;
+  width: 100%;
+  line-height: mediun;
+  font-family: "open-sans";
+}
+#mainBody .bottom-body div #aboutUs .top div .right div {
+  margin: 15px 0px ;
+  font-size: 20px;
+  text-align: left;
+}
+#mainBody .bottom-body div #aboutUs .top div .right div span {
+  margin-right: 10px;
+  font-weight: 600;
+  font-family: "roboto";
 }
