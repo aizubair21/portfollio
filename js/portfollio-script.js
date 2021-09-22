@@ -1,6 +1,6 @@
 
 $(function () {
-  $("#aboutUs").css("display","block");
+  $("#portfollio").css("display","block");
 
   $(".nav-link").on("click", function (e) {
     e.preventDefault();

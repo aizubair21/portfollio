@@ -176,7 +176,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc p {
-  font-size: 20px;
+  font-size: 14px;
   font-family: "roboto-bold";
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -191,7 +191,7 @@ body {
   border: none;
   font-weight: 600;
   color: white;
-  background: linear-gradient(90deg, skyblue, transparent);
+  background: linear-gradient(105deg, skyblue, transparent);
   transition: linear 1s;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc button:hover {
@@ -251,4 +251,44 @@ body {
   margin-right: 10px;
   font-weight: 600;
   font-family: "roboto";
+}
+#mainBody .bottom-body div #aboutUs .top .whatICanDo {
+  font-size: 25px;
+  font-family: "lato";
+}
+#mainBody .bottom-body div #aboutUs .top .whatICanDo h3 {
+  padding: 40px 0 20px 0;
+}
+#mainBody .bottom-body div #aboutUs .top .whatICanDo div {
+  display: flex;
+}
+#mainBody .bottom-body div #aboutUs .top .whatICanDo div div {
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+}
+#mainBody .bottom-body div #aboutUs .top .whatICanDo div div i {
+  color: green;
+  margin-right: 15px;
+  height: 40px;
+  padding: 10px;
+  border-right: 3px solid green;
+  line-height: 20px;
+}
+#mainBody .bottom-body div #portfollio {
+  padding: 10px;
+}
+#mainBody .bottom-body div #portfollio h3 {
+  font-size: 25px;
+  font-family: "oswald";
+  margin: 10px 0px;
+}
+#mainBody .bottom-body div #portfollio div ul {
+  width: 100%;
+}
+#mainBody .bottom-body div #portfollio div ul li {
+  display: inline-block;
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
 }
