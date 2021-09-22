@@ -20,7 +20,7 @@ body {
   position: relative;
   width: 80%;
   height: 90vh;
-  border: 1px solid black;
+  // border: 1px solid black;
   z-index: 999;
   margin: 50px auto;
   padding: 10px;
@@ -38,7 +38,7 @@ body {
   .top-body {
     width: 100%;
     height: 10vh;
-    border: 1px solid red;
+    // border: 1px solid red;
     z-index: 999;
     box-sizing: border-box;
     display: flex;
@@ -337,6 +337,7 @@ body {
         }
 
         div {
+          width: 100%;
           ul {
             width: 100%;
             
@@ -349,6 +350,28 @@ body {
           }
         }
 
+        .filter {
+          width: 100%;
+          padding-top: 100px;
+          
+          div {
+            display: inline-block;
+            width: 20%;
+            height: 100px;
+            margin: 20px 10px;
+            img {
+              width: 100%;
+              height: 100%;
+              padding: 2px;
+              background-color: @primary-color;
+            }
+
+            p {
+              padding: 10px 0px;
+              font-weight: bold;
+            }
+          }
+        }
 
 
       }
