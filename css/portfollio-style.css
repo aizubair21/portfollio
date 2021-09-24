@@ -1,6 +1,10 @@
 body {
   overflow: hidden;
   background-image: url(../image/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 .background-two {
   position: absolute;
@@ -13,14 +17,15 @@ body {
 }
 #mainBody {
   position: relative;
-  width: 80%;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   z-index: 999;
-  margin: 50px auto;
+  margin: 0;
   padding: 10px;
+  backdrop-filter: blur(5px);
 }
 #mainBody .top-body {
-  width: 100%;
+  width: 40%;
   height: 10vh;
   z-index: 999;
   box-sizing: border-box;
@@ -28,7 +33,7 @@ body {
   justify-content: space-between;
   overflow: hidden;
   padding: 5px;
-  margin: 10px 0px;
+  margin: 10px auto;
   background: linear-gradient(15deg, transparent, skyblue);
 }
 #mainBody .top-body .image {
@@ -63,18 +68,16 @@ body {
 }
 #mainBody .bottom-body {
   width: 100%;
-  border: 5px solid #ce6969;
+  border: 5px solid #00d9ff;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 #mainBody .bottom-body .nav-bar-tab {
-  width: 18%;
-  padding: 0;
-  height: 70vh;
-  margin-right: 2px;
-  background-color: #ce6969;
+  width: 15%;
+  height: 80vh;
+  background-color: #00e1ff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -143,37 +146,55 @@ body {
   opacity: 1;
 }
 #mainBody .bottom-body div {
-  width: 79%;
-  height: auto;
+  width: 85%;
+  animation: fade 1s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    left: 100%;
+  }
+  20% {
+    left: 100%;
+  }
+  30% {
+    left: 90%;
+  }
+  40% {
+    left: 80%;
+  }
+  50% {
+    left: 0px;
+  }
+  70% {
+    left: -20px;
+  }
+  80% {
+    left: -40px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 #mainBody .bottom-body div .tab-content {
   width: 100%;
   display: none;
-  box-shadow: 0px 0px 2px green inset;
+  border: 1px solid #09ff00;
   border-radius: 5px;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(50px);
 }
 #mainBody .bottom-body div .tab-content .tab-item {
   width: 100%;
-  height: 100%;
+  height: 80vh;
   position: relative;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  overflow: hidden;
-  animation: fade 0.5s linear;
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  overflow: scroll;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc h2 {
   font-size: 40px;
@@ -190,6 +211,9 @@ body {
   font-family: "anton";
   padding: 10px 0px;
   color: white;
+  background: -webkit-linear-gradient(45deg, skyblue, #b3423a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc p {
   font-size: 14px;
@@ -213,19 +237,23 @@ body {
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc button:hover {
   background: linear-gradient(90deg, #b3423a, skyblue);
 }
-#mainBody .bottom-body div .tab-content .tab-item .formar-image-one {
+#mainBody .bottom-body div .tab-content .tab-item div .formar-image-one {
+  border-radius: 50%;
+  border-bottom-right-radius: 0;
+  border: 3px solid yellow;
+  background-color: yellow;
   position: absolute;
   bottom: 0;
   right: 40px;
-  width: 490px;
-  transform: translate(-50%);
+  height: 400px;
+  width: 400px;
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   transform: rotateY(180deg);
 }
-#mainBody .bottom-body div .tab-content .tab-item .formar-image-two {
-  width: 490px;
-  height: 400px;
-  line-height: 10px;
+#mainBody .bottom-body div #aboutUs {
+  height: 80vh;
+  overflow-y: scroll;
 }
 #mainBody .bottom-body div #aboutUs .top {
   width: 100%;
@@ -276,6 +304,7 @@ body {
 #mainBody .bottom-body div #aboutUs .top .whatICanDo {
   font-size: 15px;
   font-family: "lato";
+  margin-top: 100px;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo h3 {
   padding: 20px 0;
@@ -284,27 +313,67 @@ body {
   display: flex;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo div div {
-  background-color: rgba(206, 105, 105, 0.507);
+  background-color: rgba(56, 224, 247, 0.61);
   border-radius: 25px;
   margin: 0 2px;
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: white;
+  font-weight: 600;
+  color: black;
+  padding: 5px;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo div div i {
   color: green;
   margin: 0 15px 0 5px;
-  height: 30px;
-  padding: 10px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ce6969;
   border-radius: 50%;
   line-height: 15px;
   background-color: white;
-  font-size: 15px;
+  font-size: 18px;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill {
+  margin-top: 50px;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  padding: 5px 20px;
+  background: linear-gradient(90deg, transparent, #b3423a, skyblue, transparent);
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body div {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "roboto-bold";
+  text-align: right;
+  background-color: white;
+  padding: 5px;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .icon {
+  text-align: left;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .icon i {
+  margin: 0px 5px;
 }
 #mainBody .bottom-body div #portfollio {
+  height: 80vh;
+  overflow-y: scroll;
+  animation: fromTop 1s linear;
   padding: 10px;
+}
+@keyframes fromTop {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
 }
 #mainBody .bottom-body div #portfollio h3 {
   font-size: 25px;
@@ -319,27 +388,40 @@ body {
 }
 #mainBody .bottom-body div #portfollio div ul li {
   display: inline-block;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 15px;
   cursor: pointer;
+  transition: all linear 0.5s;
+}
+#mainBody .bottom-body div #portfollio div ul li:hover {
+  background-color: gray;
+  padding: 5 10px;
+  border-radius: 20px;
+  color: white;
 }
 #mainBody .bottom-body div #portfollio .filter {
   width: 100%;
-  padding-top: 100px;
+  margin: 100px auto;
 }
 #mainBody .bottom-body div #portfollio .filter div {
   display: inline-block;
-  width: 20%;
-  height: 100px;
-  margin: 20px 10px;
+  width: 15%;
+  height: 170px;
+  margin: 5px;
+  background-color: skyblue;
 }
 #mainBody .bottom-body div #portfollio .filter div img {
   width: 100%;
-  height: 100%;
+  height: 130px;
   padding: 2px;
   background-color: skyblue;
 }
 #mainBody .bottom-body div #portfollio .filter div p {
-  padding: 10px 0px;
+  text-align: center;
+  padding: 10px;
   font-weight: bold;
+  font-size: 10px;
+  width: 100%;
+  height: 50px;
+  color: white;
 }
