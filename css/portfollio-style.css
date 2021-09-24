@@ -5,6 +5,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
+  padding: 10px 0px;
 }
 .background-two {
   position: absolute;
@@ -22,7 +23,7 @@ body {
   z-index: 999;
   margin: 0;
   padding: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(30px);
 }
 #mainBody .top-body {
   width: 40%;
@@ -81,14 +82,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  position: relative;
+}
+#mainBody .bottom-body .nav-bar-tab div {
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+  width: 98%;
+  box-sizing: border-box;
+  transform: translate3d(20deg, 10deg);
 }
 #mainBody .bottom-body .nav-bar-tab div img {
-  border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   padding: 5px;
+  width: 80px;
   background-color: yellow;
   border: 1px solid #ffffff;
 }
@@ -106,6 +114,7 @@ body {
 }
 #mainBody .bottom-body .nav-bar-tab ul li {
   padding: 5px 5px;
+  width: 100%;
   margin: 3px 0;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -117,6 +126,18 @@ body {
 #mainBody .bottom-body .nav-bar-tab ul li.active {
   background-color: white;
   cursor: pointer;
+  position: relative;
+}
+#mainBody .bottom-body .nav-bar-tab ul li.active.active::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 #mainBody .bottom-body .nav-bar-tab ul li a {
   color: black;
@@ -178,7 +199,6 @@ body {
 #mainBody .bottom-body div .tab-content {
   width: 100%;
   display: none;
-  border: 1px solid #09ff00;
   border-radius: 5px;
   backdrop-filter: blur(50px);
 }
@@ -194,28 +214,35 @@ body {
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc {
   display: flex;
   align-items: center;
+  background-color: rgba(255, 255, 0, 0.527);
   text-align: center;
 }
-#mainBody .bottom-body div .tab-content .tab-item .tab-disc h2 {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc .over {
+  border: 1px solid white;
+  padding-top: 50px;
+}
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc .over h2 {
   font-size: 40px;
-  font-family: "anton";
+  font-family: "open-sans-bold";
   color: black;
   word-spacing: 5px;
   letter-spacing: 5px;
 }
-#mainBody .bottom-body div .tab-content .tab-item .tab-disc h3 {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc .over h3 {
   font-size: 60px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 5px;
   font-family: "anton";
   padding: 10px 0px;
-  color: white;
-  background: -webkit-linear-gradient(45deg, skyblue, #b3423a);
+  color: skyblue;
+  background-color: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
 }
-#mainBody .bottom-body div .tab-content .tab-item .tab-disc p {
+#mainBody .bottom-body div .tab-content .tab-item .tab-disc .over p {
   font-size: 14px;
   font-family: "roboto-bold";
   text-transform: uppercase;
@@ -225,14 +252,14 @@ body {
   background: black;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc button {
-  padding: 10px 25px;
+  padding: 10px 35px;
   margin: 10px 0px;
   font-size: 20px;
   border: none;
   font-weight: 600;
   color: white;
-  background: linear-gradient(105deg, skyblue, transparent);
-  transition: linear 1s;
+  background-color: skyblue;
+  border-radius: 25px;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc button:hover {
   background: linear-gradient(90deg, #b3423a, skyblue);
@@ -364,15 +391,39 @@ body {
 #mainBody .bottom-body div #portfollio {
   height: 80vh;
   overflow-y: scroll;
-  animation: fromTop 1s linear;
+  animation: fade-2 1s linear;
   padding: 10px;
 }
-@keyframes fromTop {
+@keyframes fade-2 {
   0% {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: -100%;
+  }
+  20% {
     top: -100%;
   }
+  30% {
+    top: 90%;
+  }
+  40% {
+    top: 50%;
+  }
+  50% {
+    top: 0px;
+  }
+  60% {
+    top: 50%;
+  }
+  70% {
+    bottom: -20px;
+  }
+  80% {
+    bottom: -40px;
+  }
   100% {
-    top: 0;
+    left: 0px;
   }
 }
 #mainBody .bottom-body div #portfollio h3 {
@@ -424,4 +475,43 @@ body {
   width: 100%;
   height: 50px;
   color: white;
+}
+#mainBody .bottom-body div #testimonial {
+  padding: 10px;
+  animation: fade3 1s linear;
+  width: 100%;
+  height: 80vh;
+  background-color: rgba(135, 207, 235, 0.452);
+}
+@keyframes fade3 {
+  0% {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: -100%;
+  }
+  20% {
+    top: 100%;
+  }
+  30% {
+    top: 90%;
+  }
+  40% {
+    top: 50%;
+  }
+  50% {
+    top: 0px;
+  }
+  60% {
+    top: 50%;
+  }
+  70% {
+    right: -20px;
+  }
+  80% {
+    right: -40px;
+  }
+  100% {
+    right: 0px;
+  }
 }

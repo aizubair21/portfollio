@@ -1,6 +1,6 @@
 
 $(function () {
-  $("#aboutUs").css("display","block");
+  $("#testimonial").css("display","block");
 
   $(".nav-link").on("click", function (e) {
     e.preventDefault();
@@ -14,7 +14,7 @@ $(function () {
 
 });
 
-function openTabContent(tabContent) {
+function openTabContent(tabContent, color) {
    $(".tab-content").css("display","none");
 
      if (tabContent === "home") {
@@ -27,7 +27,7 @@ function openTabContent(tabContent) {
       $("#portfollio").css({"display": "block"});
 
      } else if (tabContent === "testimonial") {
-       $("#testimonial").css("dispaly", "block");
+       $("#testimonial").css("display", "block");
 
      } else if (tabContent === "contact") {
        $("#contact").css("display","block");
