@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  background-image: url(../image/background.png);
 }
 .background-two {
   position: absolute;
@@ -17,15 +18,6 @@ body {
   z-index: 999;
   margin: 50px auto;
   padding: 10px;
-}
-#mainBody .mainOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 89vh;
-  backdrop-filter: blur(5px);
-  z-index: -1;
 }
 #mainBody .top-body {
   width: 100%;
@@ -71,18 +63,39 @@ body {
 }
 #mainBody .bottom-body {
   width: 100%;
+  border: 5px solid #ce6969;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 #mainBody .bottom-body .nav-bar-tab {
-  width: 20%;
+  width: 18%;
+  padding: 0;
   height: 70vh;
+  margin-right: 2px;
+  background-color: #ce6969;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#mainBody .bottom-body .nav-bar-tab div img {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 5px;
+  background-color: yellow;
+  border: 1px solid #ffffff;
+}
+#mainBody .bottom-body .nav-bar-tab div h4 {
+  display: inline;
+  text-align: right;
+}
+#mainBody .bottom-body .nav-bar-tab div p {
+  text-align: right;
+  display: inline;
 }
 #mainBody .bottom-body .nav-bar-tab ul {
   width: 100%;
@@ -119,7 +132,7 @@ body {
   font-size: 15px;
   color: #000000;
   border-radius: 25px;
-  opacity: 0.5;
+  opacity: 0.9;
   cursor: pointer;
   transition: all linear 0.5s;
 }
@@ -131,13 +144,14 @@ body {
 }
 #mainBody .bottom-body div {
   width: 79%;
+  height: auto;
 }
 #mainBody .bottom-body div .tab-content {
   width: 100%;
   display: none;
-  border: 1px solid white;
-  background-color: white;
+  box-shadow: 0px 0px 2px green inset;
   border-radius: 5px;
+  backdrop-filter: blur(30px);
 }
 #mainBody .bottom-body div .tab-content .tab-item {
   width: 100%;
@@ -162,24 +176,20 @@ body {
   align-items: center;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: "anton";
   color: black;
   word-spacing: 5px;
   letter-spacing: 5px;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc h3 {
-  font-size: 70px;
+  font-size: 60px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 5px;
   font-family: "anton";
   padding: 10px 0px;
-  overflow: hidden;
-  position: relative;
-  background: -webkit-linear-gradient(45deg, skyblue, #b3423a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc p {
   font-size: 14px;
@@ -232,11 +242,14 @@ body {
 #mainBody .bottom-body div #aboutUs .top div {
   width: 100%;
 }
+#mainBody .bottom-body div #aboutUs .top div .left {
+  width: 60%;
+}
 #mainBody .bottom-body div #aboutUs .top div .left p {
   font-size: 15px;
   margin: 10px 0px;
-  font-family: "open-sans-bold";
-  text-transform: uppercase;
+  font-family: "open-sans";
+  width: 100%;
 }
 #mainBody .bottom-body div #aboutUs .top div .left .fas,
 #mainBody .bottom-body div #aboutUs .top div .left .fab {
@@ -244,7 +257,7 @@ body {
 }
 #mainBody .bottom-body div #aboutUs .top div .right {
   padding: 0 50px;
-  width: 100%;
+  width: 40%;
   line-height: mediun;
   font-family: "open-sans";
 }
@@ -252,34 +265,43 @@ body {
   margin: 15px 0px ;
   font-size: 20px;
   text-align: left;
+  font-size: 15px;
 }
 #mainBody .bottom-body div #aboutUs .top div .right div span {
   margin-right: 10px;
   font-weight: 600;
   font-family: "roboto";
+  letter-spacing: 1px;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo {
-  font-size: 25px;
+  font-size: 15px;
   font-family: "lato";
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo h3 {
-  padding: 40px 0 20px 0;
+  padding: 20px 0;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo div {
   display: flex;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo div div {
-  line-height: 25px;
+  background-color: rgba(206, 105, 105, 0.507);
+  border-radius: 25px;
+  margin: 0 2px;
+  line-height: 20px;
   display: flex;
   align-items: center;
+  color: white;
 }
 #mainBody .bottom-body div #aboutUs .top .whatICanDo div div i {
   color: green;
-  margin-right: 15px;
-  height: 40px;
+  margin: 0 15px 0 5px;
+  height: 30px;
   padding: 10px;
-  border-right: 3px solid green;
-  line-height: 20px;
+  background-color: #ce6969;
+  border-radius: 50%;
+  line-height: 15px;
+  background-color: white;
+  font-size: 15px;
 }
 #mainBody .bottom-body div #portfollio {
   padding: 10px;
