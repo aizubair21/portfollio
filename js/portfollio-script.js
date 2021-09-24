@@ -16,17 +16,22 @@ $(function () {
 
 function openTabContent(tabContent) {
    $(".tab-content").css("display","none");
+
      if (tabContent === "home") {
-      
-       $("#home").css("display","block");
+      $("#home").css({"display":"block"});
+
      }else if (tabContent === "aboutUs") {
-      $("#aboutUs").css("display","block");
+      $("#aboutUs").css({"display":"block"});
+
      }else if (tabContent === "portfollio") {
-      $("#portfollio").css("display","block");
+      $("#portfollio").css({"display": "block"});
+
      } else if (tabContent === "testimonial") {
        $("#testimonial").css("dispaly", "block");
+
      } else if (tabContent === "contact") {
        $("#contact").css("display","block");
+
      } else {
       $("#home").css("display","block");
      }
