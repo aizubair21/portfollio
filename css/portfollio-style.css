@@ -5,7 +5,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
-  padding: 10px 0px;
+  padding: 0px;
 }
 .background-two {
   position: absolute;
@@ -23,7 +23,6 @@ body {
   z-index: 999;
   margin: 0;
   padding: 10px;
-  backdrop-filter: blur(30px);
 }
 #mainBody .top-body {
   width: 40%;
@@ -69,44 +68,52 @@ body {
 }
 #mainBody .bottom-body {
   width: 100%;
-  border: 5px solid #00d9ff;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  height: 100vh;
 }
 #mainBody .bottom-body .nav-bar-tab {
   width: 15%;
-  height: 80vh;
+  height: 90%;
   background-color: #00e1ff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  padding: 10px 0px;
 }
-#mainBody .bottom-body .nav-bar-tab div {
+#mainBody .bottom-body .nav-bar-tab .nav-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: yellow;
+  align-items: center;
   width: 98%;
   box-sizing: border-box;
   transform: translate3d(20deg, 10deg);
+  backdrop-filter: blur(50px);
 }
-#mainBody .bottom-body .nav-bar-tab div img {
+#mainBody .bottom-body .nav-bar-tab .nav-header img {
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   padding: 5px;
-  width: 80px;
+  width: 50px;
   background-color: yellow;
-  border: 1px solid #ffffff;
+  border: 5px solid #ffffff;
 }
-#mainBody .bottom-body .nav-bar-tab div h4 {
-  display: inline;
-  text-align: right;
+#mainBody .bottom-body .nav-bar-tab .nav-header .nav-follow-icon {
+  display: flex;
+  justify-content: center;
 }
-#mainBody .bottom-body .nav-bar-tab div p {
-  text-align: right;
-  display: inline;
+#mainBody .bottom-body .nav-bar-tab .nav-header .nav-follow-icon i {
+  padding: 10px 5px;
+  margin: 0px 2px;
+  font-size: 15px;
+  cursor: pointer;
+}
+#mainBody .bottom-body .nav-bar-tab .nav-header .nav-follow-icon i:hover {
+  opacity: 0.7;
 }
 #mainBody .bottom-body .nav-bar-tab ul {
   width: 100%;
@@ -125,6 +132,7 @@ body {
 }
 #mainBody .bottom-body .nav-bar-tab ul li.active {
   background-color: white;
+  width: 90%;
   cursor: pointer;
   position: relative;
 }
@@ -204,7 +212,7 @@ body {
 }
 #mainBody .bottom-body div .tab-content .tab-item {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -214,6 +222,7 @@ body {
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 0, 0.527);
   text-align: center;
 }
@@ -236,11 +245,6 @@ body {
   font-family: "anton";
   padding: 10px 0px;
   color: skyblue;
-  background-color: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 2px;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc .over p {
   font-size: 14px;
@@ -279,7 +283,7 @@ body {
   transform: rotateY(180deg);
 }
 #mainBody .bottom-body div #aboutUs {
-  height: 80vh;
+  height: 90vh;
   overflow-y: scroll;
 }
 #mainBody .bottom-body div #aboutUs .top {
@@ -389,7 +393,7 @@ body {
   margin: 0px 5px;
 }
 #mainBody .bottom-body div #portfollio {
-  height: 80vh;
+  height: 90vh;
   overflow-y: scroll;
   animation: fade-2 1s linear;
   padding: 10px;
@@ -480,7 +484,7 @@ body {
   padding: 10px;
   animation: fade3 1s linear;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-color: rgba(135, 207, 235, 0.452);
 }
 @keyframes fade3 {
@@ -514,4 +518,75 @@ body {
   100% {
     right: 0px;
   }
+}
+#mainBody .bottom-body div #contact {
+  width: 100%;
+  height: 90vh;
+  margin: 0px 10px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+#mainBody .bottom-body div #contact .heading {
+  padding: 20px 0px;
+}
+#mainBody .bottom-body div #contact .heading h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: rgba(196, 196, 34, 0.527);
+  margin: 10px 0px;
+  font-family: 'oswald';
+}
+#mainBody .bottom-body div #contact .heading h3::after {
+  content: "";
+  width: 100%;
+  background-color: rgba(196, 196, 34, 0.527);
+  height: 5px;
+}
+#mainBody .bottom-body div #contact .contact_form {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'oswald';
+  background-color: #23e1e7;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+}
+#mainBody .bottom-body div #contact .contact_form fieldset {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid #9c9c9c;
+  padding: 20px;
+}
+#mainBody .bottom-body div #contact .contact_form fieldset label {
+  color: black;
+  margin: 0;
+  font-weight: 600;
+}
+#mainBody .bottom-body div #contact .contact_form fieldset input,
+#mainBody .bottom-body div #contact .contact_form fieldset select,
+#mainBody .bottom-body div #contact .contact_form fieldset textarea {
+  width: 100%;
+  padding: 10px 25px;
+  margin: 5px 0px;
+  border: 1px solid white;
+  outline: none;
+  background-color: whitesmoke;
+}
+#mainBody .bottom-body div #contact .contact_form fieldset input:focus,
+#mainBody .bottom-body div #contact .contact_form fieldset select:focus,
+#mainBody .bottom-body div #contact .contact_form fieldset textarea:focus {
+  border: 1px solid blue;
+  outline: none;
+}
+#mainBody .bottom-body div #contact .contact_form fieldset input {
+  border-radius: 10px;
+  color: black;
+}
+#mainBody .bottom-body div #contact .contact_form fieldset button {
+  background-color: blue;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 5px 0px;
 }

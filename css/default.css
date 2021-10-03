@@ -40,6 +40,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -88,11 +89,11 @@ em, i{font-style:italic}
 strong, b{font-weight:bold}
 code, pre{font-family:monospace}
 
-a{text-decoration:underline}
-a:hover, a:focus{text-decoration:none}
-a:hover, a:active{outline:none}
+a{text-decoration:none}
+a:hover, a:focus{text-decoration:none; color:green;}
+a:hover, a:active{outline:none; color: green;}
 
-hr{background-color:#fff; border:1px solid #fff; border-top:1px solid #aaa; clear:both; margin:2em 0}
+hr{background-color:rgb(197, 193, 193); border:1px solid #fff; border-top:1px solid #aaa; clear:both; margin:2em 0; border-radius: 25px;}
 blockquote{padding:0.2em 1em 0.2em 2em; border-left:3px solid #eee}
 
 
@@ -117,7 +118,7 @@ blockquote{padding:0.2em 1em 0.2em 2em; border-left:3px solid #eee}
 
 .col{float:left}
 .col-1_1{float:none; width:100%}
-.col-1_2, .col-2_4, .col-3_6{width:50%}
+.col-1_2, .col-2_4, .col-3_6, .col-6{width:50%}
 .col-1_3, .col-2_6{width:33.33333%}
 .col-2_3, .col-4_6{width:66.66666%}
 .col-1_4{width:25%}

@@ -36,7 +36,7 @@
 </div>
 
 <div id="mainBody">
-  <div class="top-body">
+  <!-- <div class="top-body">
     <div class="image">
       <img src="image/background.png"  alt="">
     </div>
@@ -48,12 +48,19 @@
     </div>
     <div class="overlay"></div>
   </div>
- 
+  -->
 
   <div class="bottom-body">
     <div class="nav-bar-tab">
-      <div>
+      <div class="nav-header">
         <img src="image/zubair-portfollio.jpg" alt="">
+        <h2>A.I Zubair</h2>
+        <div class="nav-follow-icon">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-github"></i>
+          <i class="fas fa-globe-asia"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
       </div>
         <ul>
         <li class=" nav-link active" onclick="openTabContent('home','red', this)"><a href="#"> <i class="fas fa-home"></i> Home</a></li>
@@ -274,7 +281,42 @@
 
       </div>
 
-      <div id="contact" class="tab-content">contact</div>
+
+      <!-- contact -->
+      <div id="contact" class="tab-content">
+        <div class="heading">
+          <h3>Contact With Me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit earum quas numquam nobis praesentium nulla quo perferendis? Expedita, aspernatur quasi!</p>
+        </div>
+
+        <div class="contact_form">
+          <form action="#" class="">
+            <fieldset>
+
+              <label class="form-label" for="user_name">NAME :</label> <input type="text" name="name" class="" id="user_name" placeholder="Type your name: " autofocus autocomplete="on">
+              
+
+              <label class="form-label" for="user_mail">NAME :</label> <input type="text" name="email" class="" id="user_mail" placeholder="Type your email: ">
+
+              <select name="selected_reason" id="select_subject">
+                <option value="Admin">Administration</option>
+                <option value="Moderation">Moderation</option>
+                <option value="Design">Design</option>
+                <option value="Development">Devlopment</option>
+                <option value="Change">Update</option>
+              </select>
+             
+
+              <label for="message">  </label>
+                <textarea name="message" id="user_message" cols="30" rows="10" placeholder="Your message......." style="padding: 10px;" ></textarea>
+
+              <button type="submit" value="submit" class="btn btn-prigmay"> <i class="fab fa-telegram-plane"></i> send to me </button>
+            
+
+            </fieldset>
+          </form>
+        </div>
+      </div>
 
     </div>
 
