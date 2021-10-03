@@ -7,6 +7,21 @@ body {
   background-attachment: scroll;
   padding: 0px;
 }
+.go_to_back {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  transition: all linear 0.5s;
+}
+.current_posittion {
+  position: absolute;
+  top: 50%;
+  width: 80%;
+  left: 50% ;
+  transform: translate(-50%, -50%);
+  transition: ease-in-out 5s;
+}
 .background-two {
   position: absolute;
   top: 50%;
@@ -76,7 +91,7 @@ body {
 }
 #mainBody .bottom-body .nav-bar-tab {
   width: 15%;
-  height: 90%;
+  height: 100%;
   background-color: #00e1ff;
   display: flex;
   flex-direction: column;
@@ -176,7 +191,6 @@ body {
 }
 #mainBody .bottom-body div {
   width: 85%;
-  animation: fade 1s ease-in-out;
 }
 @keyframes fade {
   0% {
@@ -206,7 +220,7 @@ body {
 }
 #mainBody .bottom-body div .tab-content {
   width: 100%;
-  display: none;
+  transition: all linear 0.5s;
   border-radius: 5px;
   backdrop-filter: blur(50px);
 }
@@ -217,34 +231,34 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  overflow: scroll;
+  overflow-Y: scroll;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 0, 0.527);
-  text-align: center;
+  background: linear-gradient(230deg, rgba(255, 255, 0, 0.527), transparent);
+  border-top-right-radius: 100%;
+  text-align: left;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc .over {
-  border: 1px solid white;
   padding-top: 50px;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc .over h2 {
   font-size: 40px;
-  font-family: "open-sans-bold";
+  font-family: "open-sans";
   color: black;
   word-spacing: 5px;
   letter-spacing: 5px;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc .over h3 {
-  font-size: 60px;
+  font-size: 5vw;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 5px;
   font-family: "anton";
   padding: 10px 0px;
-  color: skyblue;
+  color: #0aeeb5;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc .over p {
   font-size: 14px;
@@ -269,18 +283,24 @@ body {
   background: linear-gradient(90deg, #b3423a, skyblue);
 }
 #mainBody .bottom-body div .tab-content .tab-item div .formar-image-one {
-  border-radius: 50%;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
   border: 3px solid yellow;
   background-color: yellow;
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 40px;
-  height: 400px;
-  width: 400px;
+  height: 100%;
+  width: 500px;
+  image-orientation: inherit ;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   transform: rotateY(180deg);
+  transition: all linear 0.5s;
+}
+#mainBody .bottom-body div .tab-content .tab-item div .formar-image-one:hover {
+  border-top-left-radius: 0;
+  transition: all linear 0.5s;
 }
 #mainBody .bottom-body div #aboutUs {
   height: 90vh;
@@ -395,7 +415,6 @@ body {
 #mainBody .bottom-body div #portfollio {
   height: 90vh;
   overflow-y: scroll;
-  animation: fade-2 1s linear;
   padding: 10px;
 }
 @keyframes fade-2 {
@@ -482,7 +501,8 @@ body {
 }
 #mainBody .bottom-body div #testimonial {
   padding: 10px;
-  animation: fade3 1s linear;
+  margin: 0px 10px;
+  overflow-y: scroll;
   width: 100%;
   height: 90vh;
   background-color: rgba(135, 207, 235, 0.452);
@@ -522,6 +542,7 @@ body {
 #mainBody .bottom-body div #contact {
   width: 100%;
   height: 90vh;
+  border: 2px solid skyblue;
   margin: 0px 10px;
   padding: 10px;
   overflow-y: scroll;
