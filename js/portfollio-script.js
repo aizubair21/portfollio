@@ -1,6 +1,6 @@
 
 $(function () {
-  $("#home").removeClass("go_to_back");
+  $("#testimonial").removeClass("go_to_back");
   $("#home").addClass("current_position");
 
   $(".nav-link").on("click", function (e) {

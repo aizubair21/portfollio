@@ -142,29 +142,51 @@ body {
         align-items: center;
         width: 98%;
         box-sizing: border-box;
-        transform: translate3d(20deg, 10deg);
-        backdrop-filter: blur(50px);
+        position: relative;
+
+      
         img {
-          
-          border-bottom-right-radius: 50%;
-          border-bottom-left-radius: 50%;
-          padding: 5px;
+          border-radius: 50%;
+          border-bottom-left-radius: 0;
           width: 50px;
+          height:50px;
           background-color: yellow;
           border: 5px solid rgb(255, 255, 255);
+
+          ::after {
+            content: "asdf";
+            background-image: url("image/after_element.png");
+            background-color: black;
+            width: 100px;
+            height: 100px;
+          }
+        }
+        h2 {
+          color: white;
+          font-size: 35px;
+          font-family: 'oswald';
+          padding: 10px;
+          text-transform: lowercase;
+        }
+        P {
+          font-size: 18px;
         }
         .nav-follow-icon {
           display: flex;
           justify-content: center;
 
           i {
-            padding: 10px 5px;
-            margin: 0px 2px;
+            padding: 10px 10px;
             font-size: 15px;
             cursor: pointer;
+            transition: all linear .5s;
 
             &:hover {
               opacity: .7;
+              border-radius: 50%;
+              background-color: white;
+              padding: 10px;
+              transition: all linear .5s;
             }
           }
         }
@@ -181,6 +203,7 @@ body {
           &:hover:not(.active){
             background: gray;
             cursor: pointer;
+            transition: linear .5s;
           }
 
           &.active {
@@ -285,11 +308,12 @@ body {
             justify-content: center;
             background: linear-gradient(230deg, rgba(255, 255, 0, 0.527), transparent);
             border-top-right-radius: 100%;
-            text-align: left;
+            text-align: center;
 
            .over {
             //  border: 1px solid #0aeeb5;
              padding-top: 50px;
+
    
             h2 {
               font-size: 40px;
@@ -312,6 +336,12 @@ body {
               // -webkit-text-fill-color: transparent;
               // -webkit-text-stroke-color:white;
               // -webkit-text-stroke-width: 2px;
+
+              .first_name {
+                display: block;
+                font-size: 60px;
+                color: white;
+              }
             
             }
             p {
@@ -327,17 +357,18 @@ body {
            }
             button {
               padding: 10px 35px;
-              margin: 10px 0px;
+              margin: 10px auto;
               font-size: 20px;
               border: none;
               font-weight: 600;
               color: white;
               background-color:skyblue;
               border-radius: 25px;
+              transition: all linear 1s;
 
 
               &:hover {
-
+                transition: all linear .5s;
                 background: linear-gradient(90deg, @secondry-color, @primary-color);
                
               }
@@ -348,8 +379,9 @@ body {
           div {
         
             .formar-image-one {
-              border-top-left-radius: 50%;
-              border-bottom-right-radius: 50%;
+              
+              border-radius: 50%;
+              border-top-left-radius: 0;
               border: 3px solid yellow;
               background-color: yellow;
               position: absolute;
