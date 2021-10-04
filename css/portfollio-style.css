@@ -528,7 +528,7 @@ body {
   color: white;
 }
 #mainBody .bottom-body div #testimonial {
-  padding: 10px;
+  padding: 10px 30px;
   margin: 0px 10px;
   overflow-y: scroll;
   width: 100%;
@@ -566,6 +566,127 @@ body {
   100% {
     right: 0px;
   }
+}
+#mainBody .bottom-body div #testimonial .top {
+  font-size: 40px;
+  font-family: 'oswald';
+  font-weight: 600;
+  padding: 30px 0px;
+  color: white;
+  position: relative;
+}
+#mainBody .bottom-body div #testimonial .top::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-image: url("/image/after_element.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+}
+#mainBody .bottom-body div #testimonial .bottom .title {
+  font-size: 30px;
+  font-family: 'oswald';
+  font-weight: 600;
+  padding: 30px 0px;
+  color: white;
+  position: relative;
+}
+#mainBody .bottom-body div #testimonial .bottom .title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-image: url("/image/after_element.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+#mainBody .bottom-body div #testimonial .bottom .left {
+  width: 100%;
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu {
+  font-size: 15px;
+  font-family: "roboto";
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu .ins_name {
+  padding: 5px 20px;
+  position: relative;
+  overflow: hidden;
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu .ins_name::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  right: 0;
+  border-radius: 25px;
+  background: linear-gradient(135deg, transparent, green);
+  width: 3px;
+  height: 100%;
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu .ins_name::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, transparent, green);
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu .dift_name {
+  padding: 5px 20px;
+  position: relative;
+  overflow: hidden;
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu .dift_name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(45deg, transparent, green);
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu:hover .ins_name::before {
+  left: 100%;
+  transition: all linear 0.52s;
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu:hover .ins_name::after {
+  transition: linear 0.5s;
+  transition-delay: 0.2s;
+  top: 100%;
+}
+#mainBody .bottom-body div #testimonial .bottom .left .current-edu:hover .dift_name::after {
+  transition: linear 0.5s;
+  transition-delay: 0.4s;
+  left: 100%;
+}
+#mainBody .bottom-body div #testimonial .bottom .right .framework {
+  padding: 20px 0px;
+  font-size: 20px;
+  font-family: "oswald";
+  color: blck;
+  font-weight: 600;
+}
+#mainBody .bottom-body div #testimonial .bottom .right .element {
+  width: 100%;
+}
+#mainBody .bottom-body div #testimonial .bottom .right .element span {
+  padding: 5px 10px;
+  background-color: skyblue;
+  color: #030303;
+  margin: 0px 3px;
+  border-radius: 5px;
 }
 #mainBody .bottom-body div #contact {
   width: 100%;
