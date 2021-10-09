@@ -22,6 +22,29 @@ body {
   transform: translate(-50%, -50%);
   transition: ease-in-out 5s;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+  padding: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 5px;
+  margin: 0px 2px;
+  border-radius: 25px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(56, 224, 247, 0.61);
+}
 .background-two {
   position: absolute;
   top: 50%;
@@ -529,9 +552,10 @@ body {
 }
 #mainBody .bottom-body div #testimonial {
   padding: 10px 30px;
+  box-sizing: border-box;
   margin: 0px 10px;
   overflow-y: scroll;
-  width: 100%;
+  width: 99%;
   height: 90vh;
   background-color: rgba(135, 207, 235, 0.452);
 }
@@ -572,16 +596,17 @@ body {
   font-family: 'oswald';
   font-weight: 600;
   padding: 30px 0px;
-  color: white;
+  color: #000000;
   position: relative;
+  text-transform: uppercase;
 }
 #mainBody .bottom-body div #testimonial .top::after {
   content: "";
   position: absolute;
-  top: 60%;
-  left: 10%;
+  top: 90%;
+  left: 15%;
   transform: translate(-50%, -50%);
-  background-image: url("/image/after_element.png");
+  background-image: url("../image/after_element.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -589,12 +614,15 @@ body {
   height: 300px;
   z-index: -1;
 }
+#mainBody .bottom-body div #testimonial .bottom {
+  width: 100%;
+}
 #mainBody .bottom-body div #testimonial .bottom .title {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'oswald';
   font-weight: 600;
   padding: 30px 0px;
-  color: white;
+  color: #000000;
   position: relative;
 }
 #mainBody .bottom-body div #testimonial .bottom .title::after {
@@ -603,12 +631,12 @@ body {
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
-  background-image: url("/image/after_element.png");
+  background-image: url("../image/after_element.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   z-index: -1;
 }
 #mainBody .bottom-body div #testimonial .bottom .left {
@@ -617,6 +645,8 @@ body {
 #mainBody .bottom-body div #testimonial .bottom .left .current-edu {
   font-size: 15px;
   font-family: "roboto";
+  display: flex;
+  justify-content: space-between;
 }
 #mainBody .bottom-body div #testimonial .bottom .left .current-edu .ins_name {
   padding: 5px 20px;
@@ -671,6 +701,9 @@ body {
   transition-delay: 0.4s;
   left: 100%;
 }
+#mainBody .bottom-body div #testimonial .bottom .right {
+  padding-left: 20px;
+}
 #mainBody .bottom-body div #testimonial .bottom .right .framework {
   padding: 20px 0px;
   font-size: 20px;
@@ -688,8 +721,77 @@ body {
   margin: 0px 3px;
   border-radius: 5px;
 }
-#mainBody .bottom-body div #contact {
+#mainBody .bottom-body div #testimonial .bottom .right .element span:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+#mainBody .bottom-body div #testimonial .cretificate {
   width: 100%;
+}
+#mainBody .bottom-body div #testimonial .cretificate .title {
+  font-size: 25px;
+  font-family: 'oswald';
+  font-weight: 600;
+  padding: 30px 0px;
+  position: relative;
+}
+#mainBody .bottom-body div #testimonial .cretificate .title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-image: url("../image/after_element.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+}
+#mainBody .bottom-body div #testimonial .cretificate .items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#mainBody .bottom-body div #testimonial .cretificate .items .cf_body {
+  display: inline-block;
+  width: 30%;
+  border-radius: 5px;
+  margin: 8px;
+  border: 2px solid gray;
+}
+#mainBody .bottom-body div #testimonial .cretificate .items .cf_body .element {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mainBody .bottom-body div #testimonial .cretificate .items .cf_body .element .left {
+  width: 100%;
+  padding: 0px 5px;
+  height: 80px;
+  background-color: gray;
+  font-family: "roboto";
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+}
+#mainBody .bottom-body div #testimonial .cretificate .items .cf_body .element .left p {
+  font-family: "roboto";
+}
+#mainBody .bottom-body div #testimonial .cretificate .items .cf_body .element .right {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  line-height: 20px;
+}
+#mainBody .bottom-body div #testimonial .cretificate .items .cf_body .element .right p {
+  width: 100%;
+}
+#mainBody .bottom-body div #contact {
+  width: 99%;
   height: 90vh;
   border: 2px solid skyblue;
   margin: 0px 10px;
