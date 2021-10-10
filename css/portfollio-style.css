@@ -10,17 +10,17 @@ body {
 .go_to_back {
   position: absolute;
   top: 50%;
-  left: -100%;
+  left: -500%;
   transform: translate(-50%, -50%);
   transition: all linear 0.5s;
+  perspective: 1000px;
 }
 .current_posittion {
   position: absolute;
   top: 50%;
-  width: 80%;
   left: 50% ;
   transform: translate(-50%, -50%);
-  transition: ease-in-out 5s;
+  transition: all linear 0.5s;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -276,6 +276,7 @@ body {
   justify-content: space-between;
   padding: 10px;
   overflow-Y: scroll;
+  transition: all linear 0.5s;
 }
 #mainBody .bottom-body div .tab-content .tab-item .tab-disc {
   display: flex;
@@ -354,8 +355,12 @@ body {
   transition: all linear 0.5s;
 }
 #mainBody .bottom-body div #aboutUs {
+  width: 99%;
   height: 90vh;
   overflow-y: scroll;
+  border: 2px solid skyblue;
+  margin: 0px 10px;
+  transition: all linear 0.5s;
 }
 #mainBody .bottom-body div #aboutUs .top {
   width: 100%;
@@ -368,6 +373,7 @@ body {
   padding: 10px 0;
   font-family: "oswald";
   font-weight: 600;
+  position: relative;
 }
 #mainBody .bottom-body div #aboutUs .top div {
   width: 100%;
@@ -440,32 +446,64 @@ body {
   font-size: 18px;
 }
 #mainBody .bottom-body div #aboutUs .top .myskill {
-  margin-top: 50px;
+  margin: 50px 0px;
 }
-#mainBody .bottom-body div #aboutUs .top .myskill .skill-body {
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body * {
+  box-sizing: border-box;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container {
+  width: 100%;
+  /* Full width */
+  background-color: #dfd9d9;
+  position: relative;
+  /* Grey background */
+  overflow: hidden;
+  /* Green */
+  /* Blue */
+  /* Red */
+  /* Dark Grey */
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container .skills {
   display: flex;
-  width: 70%;
-  justify-content: center;
-  padding: 5px 20px;
-  background: linear-gradient(90deg, transparent, #b3423a, skyblue, transparent);
-}
-#mainBody .bottom-body div #aboutUs .top .myskill .skill-body div {
-  font-size: 20px;
-  font-weight: 600;
-  font-family: "roboto-bold";
+  width: 100%;
+  justify-content: space-evenly;
   text-align: right;
-  background-color: white;
-  padding: 5px;
+  padding: 10px 5px;
+  /* Right-align text */
+  margin: 5px 0px;
+  color: #ffffff;
+  border-radius: 10px;
+  /* White text color */
 }
-#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .icon {
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container .skills p:first-child {
+  position: absolute;
+  top: 50%;
+  left: 5%;
   text-align: left;
+  padding: 5px 20px;
+  transform: translate(-50%, -50%);
+  color: white;
 }
-#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .icon i {
-  margin: 0px 5px;
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container .html {
+  width: 90%;
+  background-color: #04AA6D;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container .css {
+  width: 90%;
+  background-color: #2196F3;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container .js {
+  width: 65%;
+  background-color: #f44336;
+}
+#mainBody .bottom-body div #aboutUs .top .myskill .skill-body .container .php {
+  width: 50%;
+  background-color: #808080;
 }
 #mainBody .bottom-body div #portfollio {
   height: 90vh;
   overflow-y: scroll;
+  transition: all linear 0.5s;
   padding: 10px;
 }
 @keyframes fade-2 {
@@ -643,6 +681,7 @@ body {
   width: 99%;
   height: 90vh;
   background-color: rgba(135, 207, 235, 0.452);
+  transition: all linear 0.5s;
 }
 @keyframes fade3 {
   0% {
@@ -882,6 +921,8 @@ body {
   margin: 0px 10px;
   padding: 10px;
   overflow-y: scroll;
+  transition: transform 0.08s;
+  transform-style: preserve-3d;
 }
 #mainBody .bottom-body div #contact .heading {
   padding: 20px 0px;

@@ -1,7 +1,7 @@
 
 $(function () {
-  $("#portfollio").removeClass("go_to_back");
-  $("#home").addClass("current_position");
+  $("#home").removeClass("go_to_back");
+  // $("#home").addClass("current_position");
 
   $(".nav-link").on("click", function (e) {
     e.preventDefault();

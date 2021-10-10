@@ -11,18 +11,18 @@ body {
 .go_to_back {
   position: absolute;
   top: 50%;
-  left: -100%;
+  left: -500%;
   transform: translate(-50%, -50%);
   transition: all linear .5s;
+  perspective: 1000px;
 
 }
 .current_posittion {
   position: absolute;
   top: 50%;
-  width: 80%;
   left:50% ;
   transform: translate(-50%, -50%);
-  transition: ease-in-out 5s;
+  transition: all linear .5s;
 
 }
 
@@ -329,6 +329,7 @@ body {
           justify-content: space-between;
           padding: 10px;
           overflow-Y: scroll;
+          transition: all linear .5s;
           
 
           .tab-disc {
@@ -442,22 +443,29 @@ body {
 
 
       #aboutUs {
+        width: 99%;
         height: 90vh;
         overflow-y: scroll;
+        border: 2px solid @primary-color;
+        margin: 0px 10px;
+        transition: all linear .5s;
         .top {
           width:100%;
           padding: 10px;
           position: relative;
           // border:1px solid ;
+          
+        
+
           h3 {
             width: 100%;
             font-size: 25px;
             padding: 10px 0;
             font-family: "oswald";
             font-weight: 600;
-          }
+            position: relative;;
+           }
           
-
           div {
             width: 100%;
             .left {
@@ -546,30 +554,49 @@ body {
           }
 
           .myskill {
-            margin-top: 50px;
+            margin: 50px 0px;
 
             .skill-body {
-                display: flex;
-                width: 70%;
-                justify-content: center;
-                padding: 5px 20px;
-                background: linear-gradient(90deg, transparent, @secondry-color, @primary-color, transparent);
-              div {
-                font-size: 20px;
-                // border: 1px solid black;
-                font-weight: 600;
-                font-family: "roboto-bold";
-                text-align: right;
-                background-color: white;
-                padding: 5px;
-                
-              }
-              .icon {
-                text-align: left;
-                  i {
-                    margin: 0px 5px;
+              * {box-sizing:border-box}
+              .container {
+                width: 100%; /* Full width */
+                background-color: rgb(223, 217, 217);
+                position: relative; /* Grey background */
+                overflow: hidden;
+
+               
+                .skills {
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-evenly;
+                  text-align: right;
+                  padding: 10px 5px; /* Right-align text */
+                  margin: 5px 0px;
+                  color: rgb(255, 255, 255);
+                  border-radius: 10px; /* White text color */
+                  p:first-child {
+                      position: absolute;
+                      top: 50%;
+                      left: 5%;
+                      text-align: left;
+                      // border: 1px solid black;
+                      padding: 5px 20px;
+                      transform: translate(-50%, -50%);
+                      color: white;
+                      
                   }
                 }
+
+                .html {width: 90%; background-color: #04AA6D;} /* Green */
+                .css {width: 90%; background-color: #2196F3;} /* Blue */
+                .js {width: 65%; background-color: #f44336;} /* Red */
+                .php {width: 50%; background-color: #808080;} /* Dark Grey */
+                
+              }
+
+              
+
+             
             }
           }
 
@@ -581,6 +608,7 @@ body {
         height: 90vh;
         overflow-y: scroll;
         // animation: fade-2 1s linear;
+        transition: all linear .5s;
 
         @keyframes fade-2 {
           
@@ -770,6 +798,7 @@ body {
         // border: 1px solid red;
         height: 90vh;
         background-color: rgba(135, 207, 235, 0.452);
+        transition: all linear .5s;
         @keyframes fade3 {
           0%{position: absolute;top:50%;transform: translate(-50%,-50%);left: -100%;}
           10%{}
@@ -1027,6 +1056,8 @@ body {
         margin: 0px 10px;
         padding: 10px;
         overflow-y: scroll;
+        transition: transform .08s;
+        transform-style: preserve-3d;
         .heading {
           padding: 20px 0px;
           h3 {
