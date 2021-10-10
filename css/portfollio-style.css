@@ -526,29 +526,114 @@ body {
 }
 #mainBody .bottom-body div #portfollio .filter {
   width: 100%;
-  margin: 100px auto;
+  margin: 100px 0;
+  position: relative;
 }
-#mainBody .bottom-body div #portfollio .filter div {
-  display: inline-block;
-  width: 15%;
-  height: 170px;
-  margin: 5px;
-  background-color: skyblue;
-}
-#mainBody .bottom-body div #portfollio .filter div img {
+#mainBody .bottom-body div #portfollio .filter .row {
   width: 100%;
-  height: 130px;
-  padding: 2px;
-  background-color: skyblue;
+  margin: 10px auto;
+  margin: ;
 }
-#mainBody .bottom-body div #portfollio .filter div p {
+#mainBody .bottom-body div #portfollio .filter .row div {
+  height: 170px;
+  width: 20%;
+  margin: 5px auto;
+  background-color: #cecece;
+  position: relative;
+  overflow: hidden;
+  transition: linear 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div img {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border-radius: 5px;
+}
+#mainBody .bottom-body div #portfollio .filter .row div p {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
   text-align: center;
-  padding: 10px;
+  box-sizing: border-box;
+  padding: 5px;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 15px;
   width: 100%;
   height: 50px;
-  color: white;
+  color: #ffffff;
+  background-color: skyblue;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  transition: linear 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div i {
+  position: absolute;
+  top: -100%;
+  right: 0;
+  font-size: 18px;
+  background-color: #64bfcf;
+  padding: 10px;
+  color: black;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px gray;
+  transition: all linear 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div i:hover {
+  box-shadow: 0px 5px 5px gray;
+  background-color: #21c1dd;
+}
+#mainBody .bottom-body div #portfollio .filter .row div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translate(-50%, -50%);
+  width: 17px;
+  height: 17px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #444343;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transition: all ease-out 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  width: 17px;
+  height: 17px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #444343;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+  transition: ease-out 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div:hover::after {
+  right: 10px;
+  transition: linear 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div:hover::before {
+  left: 10px;
+  transition: linear 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div:hover i {
+  top: 0;
+}
+#mainBody .bottom-body div #portfollio .filter .row div:hover p {
+  bottom: -10px;
+  transition: ease-in-out 0.5s;
+}
+#mainBody .bottom-body div #portfollio .filter .row div:hover {
+  transition: all linear 0.5s;
+  box-shadow: 0px 5px 5px gray;
 }
 #mainBody .bottom-body div #testimonial {
   padding: 10px 30px;

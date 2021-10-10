@@ -1,6 +1,6 @@
 
 $(function () {
-  $("#testimonial").removeClass("go_to_back");
+  $("#portfollio").removeClass("go_to_back");
   $("#home").addClass("current_position");
 
   $(".nav-link").on("click", function (e) {
@@ -25,9 +25,6 @@ function openTabContent(tabContent) {
       
     }
 
-
-    
-    
      if (tabContent == "home") {
       $("#home").removeClass("go_to_back");
       $("#home").addClass("current_position");
@@ -54,3 +51,6 @@ function openTabContent(tabContent) {
 
      
   };
+
+  function filterItem($elemeent_name) {
+  }
