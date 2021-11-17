@@ -502,15 +502,15 @@
         </div>
 
         <div class="contact_form">
-          <form action="#" class="">
+          <form action="php/contact.php" method="post" class="">
             <fieldset>
 
-              <label class="form-label" for="user_name">NAME :</label> <input type="text" name="name" class="" id="user_name" placeholder="Type your name: " autofocus autocomplete="on">
+              <label class="form-label" for="user_name">NAME :</label> <input type="text" name="sender_name" maxlength="10" class="" id="user_name" required placeholder="Type your name: " autofocus autocomplete="on">
               
 
-              <label class="form-label" for="user_mail">NAME :</label> <input type="text" name="email" class="" id="user_mail" placeholder="Type your email: ">
-
-              <select name="selected_reason" id="select_subject">
+              <label class="form-label" for="user_mail">E-Mail :</label> <input type="email" name="sender_email" required class="" id="user_mail" placeholder="Type your email: ">
+ 
+              <select name="sender_selected_reason" id="select_subject" required>
                 <option value="Admin">Administration</option>
                 <option value="Moderation">Moderation</option>
                 <option value="Design">Design</option>
@@ -520,7 +520,7 @@
              
 
               <label for="message">  </label>
-                <textarea name="message" id="user_message" cols="30" rows="10" placeholder="Your message......." style="padding: 10px;" ></textarea>
+                <textarea name="sender_message" id="user_message" required cols="30" rows="10" placeholder="Your message......." style="padding: 10px;" ></textarea>
 
               <button type="submit" value="submit" class="btn btn-prigmay"> <i class="fab fa-telegram-plane"></i> send to me </button>
             
