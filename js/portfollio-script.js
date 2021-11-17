@@ -11,7 +11,11 @@ $(function () {
     $(this).addClass("active");
 
   });
-
+  
+ $("#portfollio_lignbox_image").magnificPopup ({
+   delegate: "a",
+   type: "image",
+ });
 
 });
 

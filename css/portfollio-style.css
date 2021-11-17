@@ -121,6 +121,8 @@ body {
   justify-content: space-between;
   position: relative;
   padding: 10px 0px;
+  box-sizing: border-box;
+
 }
 #mainBody .bottom-body .nav-bar-tab .nav-header {
   display: flex;
@@ -130,6 +132,7 @@ body {
   width: 98%;
   box-sizing: border-box;
   position: relative;
+  padding: 3px 0px;
 }
 #mainBody .bottom-body .nav-bar-tab .nav-header img {
   border-radius: 50%;
