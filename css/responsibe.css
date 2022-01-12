@@ -1,0 +1,77 @@
+:root {
+    --primary : rgb(221, 141, 49);
+    --secoundry : rgb(204, 143, 74);
+    --black: black;
+    --white: white;
+}
+@media  screen and (max-width:400px) {
+    .sm_none {
+        display: none;
+    }
+    .logo{
+        /* display: none; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo i {
+        background-color: var(--primary);
+        padding: 20px;
+        display: inline-block;
+    }
+    #mainBody nav {
+       
+    }   
+
+    #mainBody nav .overlay{
+        /* position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+        z-index: -1; */
+    }
+    #mainBody #nav .nav_item {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        font-size: 25px;
+        background-color: var(--white);
+        z-index: 99;
+        border: 1px solid;
+        
+    }
+    #mainBody #nav .nav_item .close_button {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        padding: 15px;
+        font-size: 15px;
+        background-color: var(--primary);
+    }
+    #mainBody nav #nav .nav_item ul {
+        padding: 10px;
+        /* border: 1px solid black; */
+        display: block;
+    }
+    #mainBody #nav .nav_item ul .nav_link {
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    #download_btn {
+        width: ;
+    }
+    #banner .banner_body .image{
+    
+    }
+}
+@media (min-width:401px) {
+    .bg_block {
+        display: none;
+    }
+}
