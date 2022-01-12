@@ -37,6 +37,7 @@
 <div id="mainBody">
 
   <nav>
+    <div id="tsparticles"></div> 
     <div class="overlay"></div>
     <div class="container">
       <div id="nav" class="row">
@@ -121,14 +122,13 @@
         </div>
       </div>
   </div>
-    
   <div id="education">
     <div class="overlay"></div>
     <div class="container">
       <div class="common_heading">
-        <button class="style_button">
-          Show more
-        </button>
+       <button class="style_button">
+        Show more
+      </button>
         <h3>
           Education Qualifications
         </h3>
@@ -209,8 +209,60 @@
         </div>
       </div>
 
+
     </div>
   </div>
+
+  <section id="service">
+    <div class="container">
+      <div class="common_heading">
+        <button class="style_button"> See More</button>
+        <h3>My Service Point</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, velit. 
+        </p>
+      </div>
+
+      <div class="service_body">
+        <div class="row justify-content-center">
+          <div class="col-3 item">
+            <div class="overlay">
+              <i class="fas fa-star image_overlay"></i>
+            </div>
+            <div style="text-align: center;">
+              <strong>01</strong>
+              <h4>Web Development</h4>
+              <p>Lorem ipsum dolor Repellat.</p>
+              <span>Contact Me</span>
+            </div>
+          </div>
+
+          <div class="col-3 item">
+            <div class="overlay">
+              <i class="fas fa-star image_overlay"></i>
+            </div>
+            <div style="text-align: center;">
+              <strong>02</strong>
+              <h4>Graphics Design</h4>
+              <p>Lorem ipsum dolor Repellat.</p>
+              <span>Contact Me</span>
+            </div>
+          </div>
+          <div class="col-3 item">
+            <div class="overlay">
+              <i class="fas fa-star image_overlay"></i>
+            </div>
+            <div style="text-align: center;">
+              <strong>03</strong>
+              <h4>Logo Making</h4>
+              <p>Lorem ipsum dolor Repellat.</p>
+              <span>Contact Me</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div id="portfollio" class="d-none">
     
@@ -576,10 +628,14 @@
 <script src="JQuery/jquery-3.6.0.min.js"></script>
 
 <!-- custom js  -->
-<script src="js/portfollio-script.js"></script>
 
 
 <!-- perticels js  -->
-<script src="particles.js-master/particles.js"> </script>
+<!-- first include tsParticles -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+
+<!-- then include jquery wrapper -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+<script src="js/portfollio-script.js"></script>
 </body>
 </html>
