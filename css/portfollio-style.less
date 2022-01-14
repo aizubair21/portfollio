@@ -224,7 +224,8 @@ a {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
+      overflow:hidden;
     }
     .banner_body {
       width: 100%;
@@ -359,17 +360,20 @@ a {
     }
   }
   .common_heading {
+    text-align: center;
     padding: 30px 0px;
     h3 {
       font-size: 25px;
       font-family: "oswald";
+      font-weight: 600;
       padding: 10px 0px;
       position: relative;
       &:after {
         content: "";
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 20%;
         height: 2px;
         background: linear-gradient(45deg, @white, @primary, @white,);
@@ -380,19 +384,24 @@ a {
         content: "";
         text-align: center;
         position: absolute;
-        bottom: -12px;
-        left: 98px;
-        transform: translate-x(-50%);
+        bottom: -11px;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 20px;
         height: 25px;
         background-color: @primary;
         z-index: 1;
         border-top-left-radius: 50%;
         border-bottom-right-radius: 50%;
-        transform: rotate(54deg);
+        transform: rotate(52deg);
         // border-radius: 50%;
   
       }
+    }
+    p {
+      font-family: "roboto";
+      font-size: 15px;
+      line-height: 30px;
     }
   };
   .style_button{
@@ -472,11 +481,14 @@ a {
   }
 
   #service {
+    padding: 50px 0px;
+    position: relative;
     .service_body {
-      padding: 30px 0px;
+      height: 50vh;
+      border-bottom: 1px solid @primary;
 
       .item {
-        margin: 5px;
+        margin: 30px 5px;
         padding: 5px;
         background-color: @white;
         position: relative;
@@ -484,18 +496,17 @@ a {
         .br(1px, @primary);
         box-shadow: 0px 0px 2px @pg;
         transition: all linear .5s;
-        &:hover {
-          background-color: @primary ;
-          border: 1px solid @primary;
-          color: @white;;
-        }
-        &:hover .overlay {
-          background-color: @white;
-        }
-        &:hover span {
-          transform: translate(-50%, -50%) rotate(0deg);
-          color: @black;
-          background-color: @white;
+        // &:hover {
+        //   // background-color: @primary ;
+        //   border: 1px solid @primary;
+        //   color: @white;;
+        // }
+        // &:hover .overlay {
+        //   background-color: @white;
+        // }
+        &:hover .hover_overlay {
+          opacity: 1;
+          // transform: scale(0);
         }
 
         .overlay {
@@ -507,7 +518,7 @@ a {
           background-color: @white;
           border-radius: 50%;
           .br(1px, @primary);
-          // z-index: -1;
+          z-index: 2;
         }
 
         strong {
@@ -525,31 +536,48 @@ a {
         p{
           color:@pg;
         }
-        span {
+        .hover_overlay {
           position: absolute;
-          bottom: -30px;
-          left: 50%;
-          transform: translate(-50%, -50%) rotate(-5deg);
-          width: 100px;
-          height: 30px;
-          color: @white;
-          font-size: 15px;
-          background-color: @primary;
-          cursor: pointer;
-          font-weight: 600;
-          .br(1px, @primary);
-          border-top-left-radius: 50%;
-          border-bottom-right-radius: 50%;
-          transition: all linear .5s;
-          &:hover {
-            color: @black;
-            background-color: @white;
-            
-          }
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           .center;
-          
+          // transform: scale(1.5);
+          opacity: 0;
+          background-color: rgba(228, 211, 211, 0.822);
+          border-radius: 40px;
+          transition: all linear .5s;
+          z-index: 0;
+          span {
+            .center;
+            cursor: pointer;
+
+          }
         }
+      
       }
     }
+    .my_add {
+      position: absolute;
+      bottom: 10px;
+      left: o;
+      width: 100%;
+      height: auto;
+      padding: 25px 0px ;
+      background-color: @pg;
+      transform: rotate(-3deg);
+      .text {
+        font-size: 20px;
+        font-family:'oswald';
+        font-weight: 600;
+        color: red;
+      }
+    }
+  }
+
+  #contact {
+    padding: 50px 0px;
+    ;
   }
 }
