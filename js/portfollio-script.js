@@ -66,18 +66,10 @@ function closeNavButton() {
   $(".nav_item").css({"left":"-100%"})
 }
 
-console.log(document.getElementsByClassName("nav_item"))
-
-$("#tsparticles")
+$("#particles-js")
   .particles()
   .init(
     {
-      background: {
-        color: {
-          value:0,
-        },
-      },
-      fpsLimit: 100,
       interactivity: {
         events: {
           onClick: {
@@ -141,26 +133,12 @@ $("#tsparticles")
           speed: 3,
           straight: false,
         },
-        // move: {
-        //   enable: true,
-        //   speed: 5,
-        //   direction: "none",
-        //   random: false,
-        //   straight: false,
-        //   out_mode: "out",
-        //   bounce: false,
-        //   attract: {
-        //     enable: false,
-        //     rotateX: 600,
-        //     rotateY: 1200
-        //   }
-        // },
         number: {
           density: {
             enable: true,
-            area: 800,
+            area: 500,
           },
-          value: 150,
+          value: 80,
         },
         opacity: {
           value: 0.5,
@@ -174,18 +152,7 @@ $("#tsparticles")
           value: 5,
         },
       },
-      detectRetina: true,
+      detectRetina: false,
     },
-    function (container) {
-      // container is the particles container where you can play/pause or stop/start.
-      // the container is already started, you don't need to start it manually.
-    }
+ 
   );
-// or
-
-$("#tsparticles")
-  .particles()
-  .ajax("particles.json", function (container) {
-    // container is the particles container where you can play/pause or stop/start.
-    // the container is already started, you don't need to start it manually.
-  });

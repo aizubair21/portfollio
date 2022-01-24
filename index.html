@@ -12,16 +12,19 @@
     <!--lightbox magnific popup-->
     <link rel="stylesheet" href="css/magnific-popup.css">
 
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    
+    <!-- wow animate css -->
+    <link rel="stylesheet" href="css/animate.css">
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css">
-
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
-
-  <!-- jQuerry -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <!-- jQuerry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -37,7 +40,7 @@
 <div id="mainBody">
 
   <nav>
-    <div id="tsparticles"></div> 
+    <div id="tsparticles"></div>
     <div class="overlay"></div>
     <div class="container">
       <div id="nav" class="row">
@@ -110,7 +113,7 @@
           </div>
         </div>
 
-        <div class="image col-sm-6">
+        <div class="image col-sm-6 wow fadeInRight">
           <div class="overlay">
             <i class="fas fa-image"></i>
           </div>
@@ -138,45 +141,47 @@
 
       <div class="row justify-content-center">
         <div class="col-4">
-          <div class="item">
-            <i class="fas fa-graduation-cap image_overlay">
-
-            </i>
+          <div class="item wow bounceIn">
+            <i class="  fas fa-graduation-cap image_overlay"></i>
           </div>
           
           <div>
             <div class="overlay">
               <i class="fas fa-search image_overlay"></i>
             </div>
-            <span>HSC (Alim)</span>
-            <h4>TMKM, Tongi, Gazipur</h4>
-            <p>Arts Gorup</p>
-            <p>Passing Year - 2018</p>
+            <div class="des wow fadeInLeft ">
+              <span>HSC (Alim)</span>
+              <h4>TMKM, Tongi, Gazipur</h4>
+              <p>Arts Gorup</p>
+              <p>Passing Year - 2018</p>
+            </div>
           </div>
 
         </div>
 
-        <div class="col-4">
-          <div class="item">
-            <i class="fas fa-graduation-cap image_overlay"></i>
+        <div class="col-4" class="animate__tada">
+          <div class="item item wow bounceIn">
+            <i class="  fas fa-graduation-cap image_overlay"></i>
           </div>
 
           <div>
             <div class="overlay">
               <i class="fas fa-search image_overlay"></i>
             </div>
-            <span>SSC (Dakhil) </span>
-            <h4>Lalmohan Kamil Madrasha, Lalmohan</h4>
-            <p>Science Group</p>
-            <p>passing Year - 2016</p>
+            <div class="des wow fadeInLeft">
+              <span>SSC (Dakhil) </span>
+              <h4>Lalmohan Kamil Madrasha, Lalmohan</h4>
+              <p>Science Group</p>
+              <p>passing Year - 2016</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-4">
-          <div class="item">
-            <i class="fas fa-graduation-cap image_overlay">
+        <div class="col-4 class="animate__tada"">
+          <div class="item item wow bounceIn">
+            <i class=" fas fa-graduation-cap image_overlay">
 
             </i>
           </div>
@@ -185,27 +190,31 @@
             <div class="overlay">
               <i class="fas fa-search image_overlay"></i>
             </div>
-            <span>HSC (Alim)</span>
-            <h4>TMKM, Tongi, Gazipur</h4>
-            <p>Arts Gorup</p>
-            <p>Passing Year - 2018</p>
+            <div class="des wow fadeInLeft">
+              <span>HSC (Alim)</span>
+              <h4>TMKM, Tongi, Gazipur</h4>
+              <p>Arts Gorup</p>
+              <p>Passing Year - 2018</p>
+            </div>
           </div>
 
         </div>
 
-        <div class="col-4">
-          <div class="item">
-            <i class="fas fa-graduation-cap image_overlay"></i>
+        <div class="col-4 class="animate__tada"">
+          <div class="item  item wow bounceIn">
+            <i class=" animate__animated animate__bounce fas fa-graduation-cap image_overlay"></i>
           </div>
 
           <div>
             <div class="overlay">
               <i class="fas fa-search image_overlay"></i>
             </div>
-            <span> BA </span>
-            <h4>Islamic University, Kushtia</h4>
-            <p>Dipt:: of DIS</p>
-            <p> Noe Reading</p>
+            <div class="des wow fadeInLeft">
+              <span> BA </span>
+              <h4>Islamic University, Kushtia</h4>
+              <p>Dipt:: of DIS</p>
+              <p> Noe Reading</p>
+            </div>
           </div>
         </div>
       </div>
@@ -226,45 +235,57 @@
 
       <div class="service_body">
         <div class="row justify-content-center">
-          <div class="col-3 item">
+          <div class="col-3 item wow fadeInDown">
             <div class="overlay">
               <i class="fas fa-star image_overlay"></i>
             </div>
-            <div class="hover_overlay">
-               <a href="#"><span class="style_button">Contact Me</span></a>
-            </div>
-            <div style="text-align: center;">
-              <strong>01</strong>
-              <h4>Web Development</h4>
-              <p>Lorem ipsum dolor Repellat.</p>
-             
+            <div class="card_inner">
+              <div class="item_front" style="text-align: center;">
+                <strong>01</strong>
+                <h4>Web Development</h4>
+                <p>Lorem ipsum dolor Repellat.</p>
+              </div>
+              
+              <div class="hover_overlay">
+                <a href="#"><span class="style_button">Contact Me</span></a>
+              </div>
             </div>
           </div>
 
-          <div class="col-3 item">
+          <div class="col-3 item wow fadeInUp">
             <div class="overlay">
               <i class="fas fa-star image_overlay"></i>
             </div>
-            <div class="hover_overlay">
-              <a href="#"><span class="style_button">Contact Me</span></a>
-            </div>
-            <div style="text-align: center;">
-              <strong>02</strong>
-              <h4>Graphics Design</h4>
-              <p>Lorem ipsum dolor Repellat.</p>
+            <div class="card_inner">
+              <div class="item_front" style="text-align: center;">
+                <strong>02</strong>
+                <h4>Graphics Design</h4>
+                <p>Lorem ipsum dolor Repellat.</p>
+              </div>
+              
+              <div class="hover_overlay">
+                <a href="#"><span class="style_button">Contact Me</span></a>
+              </div>
             </div>
           </div>
-          <div class="col-3 item">
+
+
+
+          <div class="col-3 item wow fadeInDown">
             <div class="overlay">
               <i class="fas fa-star image_overlay"></i>
             </div>
-            <div class="hover_overlay">
-              <a href="#"><span class="style_button">Contact Me</span></a>
-            </div>
-            <div style="text-align: center;">
-              <strong>03</strong>
-              <h4>Logo Making</h4>
-              <p>Lorem ipsum dolor Repellat.</p>
+            <div class="card_inner">
+
+              <div class="item_front" style="text-align: center;">
+                <strong>03</strong>
+                <h4>Logo Making</h4>
+                <p>Lorem ipsum dolor Repellat.</p>
+              </div>
+
+              <div class="hover_overlay">
+                <a href="#"><span class="style_button">Contact Me</span></a>
+              </div>
             </div>
           </div>
         </div>
@@ -284,10 +305,6 @@
       </div>
     </div>
   </section>
-
-
-
-
 
   <div id="portfollio" class="d-none">
     
@@ -609,11 +626,13 @@
   <!-- <img class="background-two" src="image/background.png" alt=""> -->
 <!-- bootstrap js -->
 <script src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
 <!-- plugin -->
 <script src="js/owl.carousel.min.js"></script>
 
 <script src="js/wow-min.js"></script>
 
+<script> new WOW().init(); </script>
 <!-- vue -->
 <!-- <script src="js/vue.js"></script> -->
 
@@ -626,15 +645,15 @@
 
 <script src="JQuery/jquery-3.6.0.min.js"></script>
 
-<!-- custom js  -->
+<!-- wow js -->
+<script src="js/wow-min.js"></script>
 
+<script src="js/plugin-customize.js"></script>
 
-<!-- perticels js  -->
-<!-- first include tsParticles -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+<script src="js/tsparticles.js"></script>
 
-<!-- then include jquery wrapper -->
-<script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
 <script src="js/portfollio-script.js"></script>
+
+
 </body>
 </html>
