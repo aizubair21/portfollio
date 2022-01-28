@@ -386,7 +386,7 @@ a i {
   z-index: 0;
   border: 5px solid rgba(228, 211, 211, 0.822);
 }
-#mainBody #education .row .education_item:hover ::after {
+#mainBody #education .row .education_item:hover :after {
   padding: 30px;
   transition: all linear 0.3s;
 }
@@ -408,10 +408,11 @@ a i {
 #mainBody #education .row .education_item .des {
   padding: 5px;
 }
-#mainBody #education .row .education_item:hover .item::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) rotate(180deg);
-  transition: linear 0.3s;
+#mainBody #education .row .education_item:hover .overlay {
+  position: abssolute;
+  left: 0;
+  top: -50%;
+  transition: all linear 0.3s;
 }
 #mainBody #education .row .education_item .item {
   padding: 10px 25px;
@@ -429,7 +430,6 @@ a i {
   width: 2px;
   height: 75%;
   background-color: #dd8d31;
-  opacity: 0;
 }
 #mainBody #education .row .education_item span {
   color: #dd8d31;
@@ -495,7 +495,8 @@ a i {
   font-size: 25px;
   font-family: "oswald";
   font-weight: 600;
-  line-height: 15px;
+  line-height: 30px;
+  color: #dd8d31;
 }
 #mainBody #service .service_body .item p {
   color: gray;

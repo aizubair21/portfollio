@@ -451,7 +451,7 @@ a {
           z-index: 0;
           border: 5px solid rgba(228, 211, 211, 0.822);
         }
-        &:hover ::after {
+        &:hover :after {
           padding:30px;
           transition: all linear .3s;
           
@@ -475,10 +475,11 @@ a {
         .des {
           padding: 5px;
         }
-        &:hover .item::before {
-          opacity: 1;
-          transform:  translate(-50%, -50%) rotate(180deg);
-          transition: linear .3s;
+        &:hover .overlay {
+          position: abssolute;
+          left: 0;
+          top: -50%;
+          transition: all linear .3s;
         }
         .item {
           padding: 10px 25px;
@@ -493,7 +494,7 @@ a {
             width: 2px;
             height: 75%;
             background-color: @primary;
-            opacity: 0;
+            
           }
         }
 
@@ -580,7 +581,8 @@ a {
           font-size: 25px;
           font-family: "oswald";
           font-weight: 600;
-          line-height: 15px;;
+          line-height: 30px;
+          color: @primary;
         }
         p{
           color:@pg;
