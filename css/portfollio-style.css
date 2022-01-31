@@ -548,16 +548,67 @@ a i {
   font-weight: 600;
   color: red;
 }
+#mainBody #skills #skills_bar .skill_bar {
+  padding: 50px 0px;
+  margin: 5px;
+  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainBody #skills #skills_bar .skill_bar p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "oswald";
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  background-color: #dd8d31;
+  width: 35%;
+  text-align: center;
+  border-radius: 25px;
+}
+#mainBody #skills #skills_bar .skill_bar .circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 250;
+  animation: stroke 20s ease-in-out;
+  z-index: 2;
+}
+@keyframes stroke {
+  from {
+    stroke-dashoffset: 250;
+  }
+  to {
+    stroke-dashoffset: 4;
+  }
+}
 #mainBody #contact {
   padding: 50px 0px;
 }
-#mainBody #contact .contact_body .left {
-  width: 50%;
-  overflow: hidden;
+#mainBody #contact .contact_body .direct_contact {
+  border-bottom: 1px solid #dd8d31;
+  padding: 5px 0px;
+}
+#mainBody #contact .contact_body .left li {
+  width: auto;
+  border-bottom: 1px solid black;
+  padding: 2px 0px;
+}
+#mainBody #contact .contact_body .left li:hover {
+  color: #dd8d31;
+  cursor: pointer;
 }
 #mainBody #contact .contact_body .right {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+}
+#mainBody #contact .contact_body .right input:focus,
+#mainBody #contact .contact_body .right textarea:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 2px 2px #dd8d31;
 }

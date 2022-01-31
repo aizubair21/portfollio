@@ -419,9 +419,9 @@ a {
       color: @black;
     }
   };
-.more_button {
-  .center;
-}
+  .more_button {
+    .center;
+  }
   #education{
     background-color: rgba(228, 211, 211, 0.822);
     padding: 50px 0px;
@@ -639,22 +639,81 @@ a {
     }
   }
 
+  #skills {
+    #skills_bar {
+      .skill_bar {
+        padding: 50px 0px;
+        margin: 5px;
+        position: relative;
+        display: block;
+        position: relative;
+        .center;
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%, -50%);
+          font-family: "oswald";
+          font-size: 18px;
+          color:@black;
+          font-weight: 600;
+          background-color: @primary;
+          width: 35%;
+          text-align: center;
+          border-radius: 25px
+
+        };
+        .circle {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 250;
+          animation: stroke 20s ease-in-out;
+          z-index: 2;
+        }
+        
+        @keyframes stroke {
+          from {
+            stroke-dashoffset: 250;
+          }
+          to {
+            stroke-dashoffset: 4;
+          }
+        }        
+      }
+    }
+  }
+
   #contact {
     padding: 50px 0px;
-
-
-
     .contact_body {
+      .direct_contact {
+          border-bottom: 1px solid @primary;
+          padding: 5px 0px;
+        }
       .left {
         // .br(1px, black);
-        width: 50%;
-        overflow: hidden
+        
+        li {
+          width: auto;
+          border-bottom:1px solid @black;
+          padding: 2px 0px;
+
+          &:hover {
+            color:@primary;
+            cursor: pointer
+          }
+        };
       }
+
+
+    
 
       .right {
         .center;
-        // .br(1px, black);
-        width: 50%;
+          input:focus, textarea:focus {
+            border:none;
+            outline: none;;
+            box-shadow: 0px 0px 2px 2px @primary;
+        }
 
       }
     }

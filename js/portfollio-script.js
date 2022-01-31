@@ -1,7 +1,6 @@
 
-$(function () {
-  // $("#home").removeClass("go_to_back");
-  // // $("#home").addClass("current_position");
+
+$(document).ready(function () {
 
   $(".nav-link").on("click", function (e) {
     e.preventDefault();
