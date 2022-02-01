@@ -201,3 +201,33 @@ function openTab(cityName) {
   document.getElementById(cityName).style.display = "block";
   // evt.currentTarget.className += " active";
 }
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+function showSlides(n) {
+  var a,b;
+  var slides = document.getElementsByClassName("mySlides");
+  // var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (a = 0; a < slides.length; a++) {
+      slides[a].style.display = "none";
+  }
+  for (b = 0; b < dots.length; b++) {
+      dots[b].className = dots[b].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  // dots[slideIndex-1].className += " active";
+}
