@@ -374,7 +374,7 @@ a {
       &:after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 20%;
@@ -387,7 +387,7 @@ a {
         content: "";
         text-align: center;
         position: absolute;
-        bottom: -11px;
+        bottom: -15px;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 20px;
@@ -421,6 +421,26 @@ a {
   };
   .more_button {
     .center;
+  }
+
+  .outer_glow {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+      box-shadow: 0px 0px 2px 2px @primary;
+    };
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 105%;
+      height: 105%;
+      border: 1px solid @primary;
+    }
   }
   #education{
     background-color: rgba(228, 211, 211, 0.822);
@@ -532,6 +552,9 @@ a {
         background-color: @white;
         position: relative;
         height: 200px;
+        // border-top-left-radius: 40%;
+        // border-top-right-radius: 40%; 
+        // overflow: hidden;
         // border-radius: 40px;;
         .br(1px, @primary);
         box-shadow: 0px 0px 2px @pg;
@@ -615,6 +638,8 @@ a {
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           background-color: @white;
+          // border-top-left-radius: 40%;
+          // border-top-right-radius: 40%;
           padding-top: 20px;
         
         }
@@ -640,44 +665,116 @@ a {
   }
 
   #skills {
+    margin-top:50px;
+    background-color: rgba(228, 211, 211, 0.822);
     #skills_bar {
-      .skill_bar {
-        padding: 50px 0px;
-        margin: 5px;
-        position: relative;
-        display: block;
-        position: relative;
-        .center;
-        p {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform:translate(-50%, -50%);
-          font-family: "oswald";
-          font-size: 18px;
-          color:@black;
-          font-weight: 600;
-          background-color: @primary;
-          width: 35%;
-          text-align: center;
-          border-radius: 25px
-
-        };
-        .circle {
-          stroke-dasharray: 1000;
-          stroke-dashoffset: 250;
-          animation: stroke 20s ease-in-out;
-          z-index: 2;
+      padding: 50px 0px;
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;;
+      .skill_image {
+        display: flex;
+        justify-content: right;
+        // .br(1px, black);
+        // border-top-left-radius:25px;
+        img {
+          border-top-left-radius: 30%;
+          border-bottom-right-radius: 30%;
+          box-shadow: 0px 0px 5px 5px @primary;;
         }
-        
-        @keyframes stroke {
-          from {
+      }
+
+      .skill_des {
+        padding: 5px;
+        // .br(1px, @primary);
+        box-shadow: 0px 0px 2px 0px @primary;
+        margin: 5px 0px;
+        width: auto;
+        height: 80%;
+        overflow: hidden;
+        .tabcontent {
+          overflow: hidden;
+          height: 100%;
+          display: none;
+        }
+      }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+
+      .skill_item {
+        // .br(1px, black);
+        .skill_bar {
+          box-shadow: 0px 0px 2px 0px @primary;
+          padding: 2px;
+          text-align: center;
+          height: auto;
+          // .br(1px, black);
+          position: relative;
+          h4 {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            // .br(1px, black);
+            background-color: @pg;
+            padding: 2px;
+            color: white;;
+          }
+          .skill_circle {
+            position: relative;
+            width: 100%;
+            background-color: @pg;
+            height: 100%;
+            border-radius: 25px;
+          }
+          p {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform:translate(-50%, -50%);
+            font-family: "oswald";
+            font-size: 13px;
+            color:@white;
+            font-weight: 600;
+            background-color: @primary;
+            width: 80%;
+            text-align: center;
+            border-radius: 25px;
+
+          };
+          p:last-child {
+            width: 50%;
+          }
+          .circle {
+            stroke-dasharray: 1000;
             stroke-dashoffset: 250;
+            animation: stroke 20s;
+            z-index: 2;
           }
-          to {
-            stroke-dashoffset: 4;
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+            .br(1px, black)
           }
-        }        
+          
+          @keyframes stroke {
+            from {
+              stroke-dashoffset: 250;
+            }
+            to {
+              stroke-dashoffset: 4;
+            }
+          }        
+        }
       }
     }
   }
@@ -717,5 +814,16 @@ a {
 
       }
     }
+  }
+
+
+
+  //footer
+
+  footer {
+    background-color: rgba(228, 211, 211, 0.2);
+    height: auto;
+    padding: 5px;
+    
   }
 }

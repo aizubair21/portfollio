@@ -310,7 +310,7 @@ a i {
 #mainBody .common_heading h3:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20%;
@@ -321,7 +321,7 @@ a i {
   content: "";
   text-align: center;
   position: absolute;
-  bottom: -11px;
+  bottom: -15px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20px;
@@ -353,6 +353,25 @@ a i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#mainBody .outer_glow {
+  position: relative;
+}
+#mainBody .outer_glow::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  box-shadow: 0px 0px 2px 2px #dd8d31;
+}
+#mainBody .outer_glow::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 105%;
+  border: 1px solid #dd8d31;
 }
 #mainBody #education {
   background-color: rgba(228, 211, 211, 0.822);
@@ -548,34 +567,87 @@ a i {
   font-weight: 600;
   color: red;
 }
-#mainBody #skills #skills_bar .skill_bar {
-  padding: 50px 0px;
-  margin: 5px;
-  display: block;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#mainBody #skills {
+  margin-top: 50px;
+  background-color: rgba(228, 211, 211, 0.822);
 }
-#mainBody #skills #skills_bar .skill_bar p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#mainBody #skills #skills_bar {
+  padding: 50px 0px;
+}
+#mainBody #skills #skills_bar .skill_image {
+  display: flex;
+  justify-content: right;
+}
+#mainBody #skills #skills_bar .skill_image img {
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  box-shadow: 0px 0px 5px 5px #dd8d31;
+}
+#mainBody #skills #skills_bar .skill_des {
+  padding: 5px;
+  box-shadow: 0px 0px 2px 0px #dd8d31;
+  margin: 5px 0px;
+  width: auto;
+  height: 80%;
+  overflow: hidden;
+}
+#mainBody #skills #skills_bar .skill_des .tabcontent {
+  overflow: hidden;
+  height: 100%;
+  display: none;
+}
+#mainBody #skills #skills_bar .hide {
+  display: none;
+}
+#mainBody #skills #skills_bar .show {
+  display: block;
+}
+#mainBody #skills #skills_bar .skill_item .skill_bar {
+  box-shadow: 0px 0px 2px 0px #dd8d31;
+  padding: 2px;
+  text-align: center;
+  height: auto;
+  position: relative;
+}
+#mainBody #skills #skills_bar .skill_item .skill_bar h4 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: gray;
+  padding: 2px;
+  color: white;
+}
+#mainBody #skills #skills_bar .skill_item .skill_bar .skill_circle {
+  position: relative;
+  width: 100%;
+  background-color: gray;
+  height: 100%;
+  border-radius: 25px;
+}
+#mainBody #skills #skills_bar .skill_item .skill_bar p {
   font-family: "oswald";
-  font-size: 18px;
-  color: black;
+  font-size: 13px;
+  color: white;
   font-weight: 600;
   background-color: #dd8d31;
-  width: 35%;
+  width: 80%;
   text-align: center;
   border-radius: 25px;
 }
-#mainBody #skills #skills_bar .skill_bar .circle {
+#mainBody #skills #skills_bar .skill_item .skill_bar p:last-child {
+  width: 50%;
+}
+#mainBody #skills #skills_bar .skill_item .skill_bar .circle {
   stroke-dasharray: 1000;
   stroke-dashoffset: 250;
-  animation: stroke 20s ease-in-out;
+  animation: stroke 20s;
   z-index: 2;
+}
+#mainBody #skills #skills_bar .skill_item .skill_bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) border: 1px solid black;;
 }
 @keyframes stroke {
   from {
@@ -611,4 +683,9 @@ a i {
   border: none;
   outline: none;
   box-shadow: 0px 0px 2px 2px #dd8d31;
+}
+#mainBody footer {
+  background-color: rgba(228, 211, 211, 0.2);
+  height: auto;
+  padding: 5px;
 }

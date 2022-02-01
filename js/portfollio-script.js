@@ -14,9 +14,29 @@ $(document).ready(function () {
    delegate: "a",
    type: "image",
  });
+//  $(".skill_bar_details").css("display","block");
+//  function openTab(key) {
+//    $(".skill_bar_details").hide();
+//    if (key=="html") {
+//      $(".skill_bar_details").hide();
+//      $("#html_des").show();
+//    }else if (key == "css") {
+//      $(".skill_bar_details").hide();
+//      $("#css_des").show();
+//    } else if (key === "js") {
+//      $(".skill_bar_details").hide();
+//      $("#js_des").show();
+//    } else if (key == "php") { 
+//      $(".skill_bar_details").hide();
+//      $("#php_des").show();
+//    } else {
+//      $(".skill_bar_details").hide();
+//      $("#html_des").show();
+//    }
+//  }
+ 
 
 });
-
 // function openTabContent(tabContent) {
 //     $(".tab-content").removeClass("current_position");
 //     $(".tab-content").addClass("go_to_back");
@@ -155,3 +175,29 @@ $("#particles-js")
     },
  
   );
+
+
+// document.getElementsByClassName("skill_bar_details").classLIst.add("hide");
+
+tabcontent = document.getElementsByClassName("tabcontent")[0].style.display = "block";
+/*sillbar slider*/
+function openTab(cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  // evt.currentTarget.className += " active";
+}

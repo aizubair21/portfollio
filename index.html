@@ -51,11 +51,11 @@
         <div class="nav_item col-sm-10">
           <div class="close_button bg_block" onclick="closeNavButton()">X</div>
           <ul>
-            <li class=" nav-link"><a class="nav_active" href="#"> <i class="fas fa-home"></i> Home</a></li>
-            <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li>
+            <li class=" nav-link"><a class="nav_active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
+            <!-- <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li> -->
             <li class="nav-link" ><a href="#"> <i class="fas fa-image"></i> Portfollio </a></li>
             <li class="nav-link" > <a href="#"> <i class="fas fa-pen"></i> Resume</a></li>
-            <li class="nav-link"><a href="#"> <i class="fas fa-globe-asia"></i> Service</a></li>
+            <li class="nav-link"><a href="/service"> <i class="fas fa-globe-asia"></i> Service</a></li>
             <li class="nav-link" > <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
             <li><a class="download_btn" href="#">View CV</a></li>
           </ul>   
@@ -64,6 +64,7 @@
       </div>
     </div>
   </nav>
+  
   <div id="banner" class="">
     <div id="particles-js"></div>
     <div class="container">
@@ -126,6 +127,7 @@
     
     </div> 
   </div>
+
   <div id="education">
     <div class="overlay"></div>
     <div class="container">
@@ -290,7 +292,7 @@
       </div>
     </div>
 
-    <div class="my_add">
+    <div class="my_add d-none">
       <div class="container">
         <div class="d-flex justify-content-evenly align-items-center">
           <div class="text">
@@ -483,128 +485,9 @@
     </div>
   </div>
 
-  <div id="testimonial" class="d-none">
-    <div class="top">resume</div>
-    <hr>
-    <div class="bottom d-flex">
-      <div class="left">
-        <div class="title">Education</div>
-
-        <div class="current-edu d-flex justify-content-between">
-          <div class="ins_name" style="text-align: right;">
-            <strong>2019-present</strong>
-            <p>Islamic University Kushtis, (IU)</p>
-          </div>
-
-          <div class="dift_name" style="text-align: left;">Da'wah and Islamic Studies (DIS)</div>
-            
-        </div>
-
-        <div class="title">Road Map
-            <div class="current_edu">
-              <div class="ins_name">
-
-              </div>
-              <div class="dift_name">
-
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="title">front-end skills</div>
-
-        <div class="element">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>Java Script</span>
-          <span>jQuerry</span>
-          <span>bootstrap-5</span>
-        </div>
-
-        <div class="framework">Framework </div>
-
-        <div class="element">
-          <span> React </span>
-          <span> Vue Js</span>
-        </div>
-
-        <div class="title"> Back-end skills </div>
-
-        <div class="element">
-          <span> PHP </span>
-          <span> My Sql </span>
-          <span>Larabel</span>
-        </div>
-
-        <div class="title">Version control </div>
-
-        <div class="element">
-          <span> Github </span>
-        </div>
-        
-        <div class="title"> Technical Skills</div>
-        <div class="element">
-          <span class="d-block">Microsoft: Word, Excel, Powerpoint</span>
-          <span class="d-block my-2">Adobe: Photoshop, Illustrator</span>
-          <span class="d-block">Editor: VsCode, Sublime</span>
-        </div>
-
-
-        <div class="title">server control</div>
-        <div class="element">
-          <span>Github</span>
-          <span>Netlify</span>
-          <span>Cpanel</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="cretificate">
-      <div class="title">cretificate</div>
-      <div class="items">
-
-      <div class="cf_body">
-        <div class="element">
-          <div class="left">
-            <p>Earth Face It sollution</p>
-          </div>
-          <div class="right"> 
-            <p>Web Designer</p>
-            <span>2021</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="cf_body">
-        <div class="element">
-        <div class="left">
-          FreeCodeCam.org
-        </div>
-        <div class="right"> 
-          <p>Front-end with vue</p>
-          <span>2021</span>
-        </div>
-        </div>
-      </div>
-
-      <div class="cf_body">
-        <div class="element">
-          <div class="left">
-            Earth Face It Sollution
-          </div>
-          <div class="right"> 
-            <p>Web Designer</p>
-            <span>2021</span> 
-          </div>
-        </div>
-      </div>
-
-      </div>
-
-    </div>
-  </div>
+ <section id="my_word">
+   
+ </section>
 
 
   <section id="skills">
@@ -615,40 +498,73 @@
       </div>
 
 
-      <div id="skills_bar">
-        <div class="row justify-content-center">
-          <div class="col-sm-3">
-            <div class="skill_bar d-block">
-              <h4>HTML</h4>
-              <div>
-                <svg>
-                  <circle class="circle" cx="100" cy="100" r="40" stroke="#dd8d31" stroke-width="10" fill-opacity="0" />
-                </svg>
+      <div id="skills_bar" class="row">
+        <div class=" col-sm-4 skill_image  ">
+          <img src="image/ami.jpeg" alt="">
+        </div>
+        <div class="skill_item col-sm-8">
+          <div class="skill_des">
+            
+                        <!-- Tab content -->
+            <div id="London" class="tabcontent">
+              <h3>HTML</h3>
+              <p>London is the capital city of England.</p>
+            </div>
+
+            <div id="Paris" class="tabcontent">
+              <h3>CSS</h3>
+              <p>Paris is the capital of France.</p>
+            </div>
+
+            <div id="Tokyo" class="tabcontent">
+              <h3>PHP</h3>
+              <p>Tokyo is the capital of Japan.</p>
+            </div>
+
+            <div id="Singapur" class="tabcontent">
+              <h3>PHP</h3>
+              <p>Tokyo is the capital of Japan.</p>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="skill_bar">
+                <h4 class="tablinks" onclick="openTab('London')"> HTML</h4>
+                <div class="skill_circle">
+                  <p>80%</p>
+                </div>
               </div>
-              <p>80%</p>
+            </div>
+            
+            <div class="col-3">
+              <div class="skill_bar css_skill">
+                <h4 class="tablinks" onclick="openTab('Paris')">CSS</h4>
+                <div class="skill_circle">
+                  <p class="w-80">80%</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-3">
+              <div class="skill_bar">
+                <h4 class="tablinks" onclick="openTab('Tokyo')">JS</h4>
+                <div class="skill_circle">
+                  <p class="70">70%</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-3">
+              <div class="skill_bar">
+              <h4 class="tablinks" onclick="openTab('Singapur')">PHP</h4>
+              <div class="skill_circle">
+                <p class="w-50">50%</p>
+              </div>
             </div>
           </div>
 
-          <div class="col-sm-3">
-            <div class="skill_bar">
-              <svg>
-                <circle class="circle" cx="100" cy="100" r="40" stroke="#dd8d31" stroke-width="10" fill-opacity="0" />
-              </svg>
-              <p>HTML</p>
-              <span>80%</span>
-            </div>
-          </div>
-
-          <div class="col-sm-3">
-            <div class="skill_bar">
-              <svg>
-                <circle class="circle" cx="100" cy="100" r="40" stroke="#dd8d31" stroke-width="10" fill-opacity="0" />
-              </svg>
-              <p>HTML</p>
-              <span>80%</span>
-            </div>
-          </div>
-
+        </div>
           
         </div>
       </div>
@@ -700,7 +616,7 @@
               </div>
               <div class="col-md-12">
                 <label for="validationDefault03" class="form-label">Message</label>
-                <textarea name="message" id="message" cols="75" rows="10" required style="padding: 10px"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" required style="padding: 10px"></textarea>
               </div> 
               <div class="col-12">
                 <div class="form-check">
@@ -723,6 +639,28 @@
     
   </section>
 
+
+  <footer>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="heading">
+          Who am i
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="heading">
+          Links
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="heading">
+          Contact
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </div>
 
