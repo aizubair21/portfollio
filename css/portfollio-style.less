@@ -705,182 +705,175 @@ a {
     display: block;
   }
 
-      .skill_item {
+    .skill_item {
+      // .br(1px, black);
+      .skill_bar {
+        box-shadow: 0px 0px 2px 0px @primary;
+        padding: 2px;
+        text-align: center;
+        height: auto;
         // .br(1px, black);
-        .skill_bar {
-          box-shadow: 0px 0px 2px 0px @primary;
-          padding: 2px;
-          text-align: center;
-          height: auto;
+        position: relative;
+        h4 {
+          // position: absolute;
+          // top: 50%;
+          // left: 50%;
+          // transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
           // .br(1px, black);
-          position: relative;
-          h4 {
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            // .br(1px, black);
-            background-color: @pg;
-            padding: 2px;
-            color: white;;
-          }
-          .skill_circle {
-            position: relative;
-            width: 100%;
-            background-color: @pg;
-            height: 100%;
-            border-radius: 25px;
-          }
-          p {
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform:translate(-50%, -50%);
-            font-family: "oswald";
-            font-size: 13px;
-            color:@white;
-            font-weight: 600;
-            background-color: @primary;
-            width: 60%;
-            text-align: center;
-            border-radius: 25px;
-
-          };
-          p:last-child {
-            width: 50%;
-          }
-          .circle {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 250;
-            animation: stroke 20s;
-            z-index: 2;
-          }
-          svg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%)
-            .br(1px, black)
-          }
-          
-          @keyframes stroke {
-            from {
-              stroke-dashoffset: 250;
-            }
-            to {
-              stroke-dashoffset: 4;
-            }
-          }        
+          background-color: @pg;
+          padding: 2px;
+          color: white;;
         }
-      }
-      .style_button {
-        padding: 5px 10px;
-        margin: 15px auto;
-        text-align:center;
+        .skill_circle {
+          position: relative;
+          width: 100%;
+          background-color: @pg;
+          height: 100%;
+          border-radius: 25px;
+        }
+        p {
+          // position: absolute;
+          // top: 50%;
+          // left: 50%;
+          // transform:translate(-50%, -50%);
+          font-family: "oswald";
+          font-size: 13px;
+          color:@white;
+          font-weight: 600;
+          background-color: @primary;
+          width: 60%;
+          text-align: center;
+          border-radius: 25px;
+
+        };
+        p:last-child {
+          width: 50%;
+        }
+        .circle {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 250;
+          animation: stroke 20s;
+          z-index: 2;
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%)
+          .br(1px, black)
+        }
+        
+        @keyframes stroke {
+          from {
+            stroke-dashoffset: 250;
+          }
+          to {
+            stroke-dashoffset: 4;
+          }
+        }        
       }
     }
+    .style_button {
+      padding: 5px 10px;
+      margin: 15px auto;
+      text-align:center;
+    }
+    
   }
 
 
   #my_work {
+    background-color: rgba(228, 211, 211, 0.822);
     .work_des {
-        /* Slideshow container */
-      .slideshow-container {
-        max-width: 1000px;
+      .slider_item {
+        // .br(1px, black);
+        box-shadow: 0px 0px 5px 0px @primary;
+        width:300px;
+        height: 350px;
+        padding: 5px;
         position: relative;
-        margin: auto;
-      }
+        overflow:hidden;
+        transition: all linear .2s;
+        margin: 5px 0px;
+        .image {
+          width:100%;
+          height: 78%;
+          overflow:hidden;
+          // .br(1px, @primary);
+          img{
+            width: 100%;
+            height: 100%;
+            transition: all linear .5s;
+            &:hover {
+              transform: scale(1.2);
+              
+            };
+          }
+        }
 
-      /* Hide the images by default */
-      .mySlides {
-        display: none;
-      }
+        .slider_des {
+          padding: 3px 5px;
+          margin-top: 3px;
+          background-color: @primary;
+          position: relative;
+          overflow:hidden;
+          .br(1px, @primary);
+          h3{
+            color:@white;;
+            font-size: 19px;
+            span {
+              color: @black;
+            }
+          }
+          p {
+            color: @black;
+          }
+          &::after {
+          content: "";
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          bottom:-40px;
+          right: -40px;
+          background-color: @white;;
+          transform: rotate(45deg);
+          z-index: 0;
+          box-shadow:5px 5px 10px  10px @pg;
+          }
+        }
+        &::before {
+          content:"i";
+          position: absolute;
+          bottom: -40px;
+          right: 0;
+          width: 25px;
+          height: 30px;
+          background-color: @primary;
+          .center;
+          border-top-left-radius: 25px;
+          border-top-right-radius: 25px;;
+          color:@white;
+          font-size: 15px;
+          z-index: 1;
+          transition: all linear .5s;
+          cursor: pointer;
+        }
+        &:hover::before {
+          bottom:0px;
+          box-shadow: -2px 0px 5px 0px @primary;
+        }
+        &:hover {
+          box-shadow: 0px 5px 10px 2px @primary;;
+        }
 
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
 
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      .active, .dot:hover {
-        background-color: #717171;
-      }
-
-      /* Fading animation */
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-
-      @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
-
-      @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
       }
     }
   }
+
   #contact {
     padding: 50px 0px;
     .contact_body {
@@ -924,14 +917,15 @@ a {
             outline:none;
             border:none;
             box-shadow: 0px 0px 5px 0px @primary;
-            border-radius: 15px;;
+            border-radius: 15px;
+            
           }
           textarea {
             outline:none;
             border:none;
             width: 100%;
             box-shadow: 0px 0px 5px 0px @primary;
-            border-radius: 25px;;
+            border-radius: 20px;;
           }
           
           input:focus, textarea:focus {

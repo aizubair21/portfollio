@@ -662,99 +662,87 @@ a i {
   margin: 15px auto;
   text-align: center;
 }
-#mainBody #my_work .work_des {
-  /* Slideshow container */
-  /* Hide the images by default */
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* Caption text */
-  /* Number text (1/3 etc) */
-  /* The dots/bullets/indicators */
-  /* Fading animation */
+#mainBody #my_work {
+  background-color: rgba(228, 211, 211, 0.822);
 }
-#mainBody #my_work .work_des .slideshow-container {
-  max-width: 1000px;
+#mainBody #my_work .work_des .slider_item {
+  box-shadow: 0px 0px 5px 0px #dd8d31;
+  width: 300px;
+  height: 350px;
+  padding: 5px;
   position: relative;
-  margin: auto;
+  overflow: hidden;
+  transition: all linear 0.2s;
+  margin: 5px 0px;
 }
-#mainBody #my_work .work_des .mySlides {
-  display: none;
-}
-#mainBody #my_work .work_des .prev,
-#mainBody #my_work .work_des .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-#mainBody #my_work .work_des .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-#mainBody #my_work .work_des .prev:hover,
-#mainBody #my_work .work_des .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#mainBody #my_work .work_des .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+#mainBody #my_work .work_des .slider_item .image {
   width: 100%;
-  text-align: center;
+  height: 78%;
+  overflow: hidden;
 }
-#mainBody #my_work .work_des .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+#mainBody #my_work .work_des .slider_item .image img {
+  width: 100%;
+  height: 100%;
+  transition: all linear 0.5s;
+}
+#mainBody #my_work .work_des .slider_item .image img:hover {
+  transform: scale(1.2);
+}
+#mainBody #my_work .work_des .slider_item .slider_des {
+  padding: 3px 5px;
+  margin-top: 3px;
+  background-color: #dd8d31;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dd8d31;
+}
+#mainBody #my_work .work_des .slider_item .slider_des h3 {
+  color: white;
+  font-size: 19px;
+}
+#mainBody #my_work .work_des .slider_item .slider_des h3 span {
+  color: black;
+}
+#mainBody #my_work .work_des .slider_item .slider_des p {
+  color: black;
+}
+#mainBody #my_work .work_des .slider_item .slider_des::after {
+  content: "";
+  width: 100px;
+  height: 100px;
   position: absolute;
-  top: 0;
+  bottom: -40px;
+  right: -40px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 0;
+  box-shadow: 5px 5px 10px 10px gray;
 }
-#mainBody #my_work .work_des .dot {
+#mainBody #my_work .work_des .slider_item::before {
+  content: "i";
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  width: 25px;
+  height: 30px;
+  background-color: #dd8d31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: white;
+  font-size: 15px;
+  z-index: 1;
+  transition: all linear 0.5s;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
 }
-#mainBody #my_work .work_des .active,
-#mainBody #my_work .work_des .dot:hover {
-  background-color: #717171;
+#mainBody #my_work .work_des .slider_item:hover::before {
+  bottom: 0px;
+  box-shadow: -2px 0px 5px 0px #dd8d31;
 }
-#mainBody #my_work .work_des .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+#mainBody #my_work .work_des .slider_item:hover {
+  box-shadow: 0px 5px 10px 2px #dd8d31;
 }
 #mainBody #contact {
   padding: 50px 0px;
@@ -800,7 +788,7 @@ a i {
   border: none;
   width: 100%;
   box-shadow: 0px 0px 5px 0px #dd8d31;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 #mainBody #contact .contact_body .right input:focus,
 #mainBody #contact .contact_body .right textarea:focus {
