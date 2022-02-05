@@ -42,6 +42,7 @@ p {
   z-index: 1;
   display: inline-block;
   cursor: pointer;
+  transition: all linear 0.5s;
 }
 .download_btn::after {
   content: "\21AA";
@@ -460,9 +461,11 @@ a i {
   font-size: 15px;
   line-height: 20px;
   z-index: 2;
+  padding-bottom: 8px;
 }
 #mainBody #education .row .education_item p {
-  line-height: 10px;
+  font-size: 13px;
+  line-height: 2px;
 }
 #mainBody #service {
   padding: 50px 0px;
