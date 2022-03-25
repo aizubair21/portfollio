@@ -57,7 +57,7 @@ $("#particles-js")
         color: "#dd8d31",  
         distance: 80,
         enable:true,
-        opacity: 0.5,
+        opacity: 0.9,
         width: 1,
       },  
       collisions: {
@@ -67,8 +67,8 @@ $("#particles-js")
         direction: "none",//none, row, colums  
         enable: true,
         outMode: "bounce",//bounce, 
-        random: false,
-        speed: 3,
+        random: true,
+        speed: 0,
         straight: false,
       },  
       number: {
@@ -76,7 +76,7 @@ $("#particles-js")
           enable: true,  
           area: 500,
         },  
-        value: 80,
+        value: 70,
       },  
       opacity: {
         value: 0.5,  
@@ -86,7 +86,7 @@ $("#particles-js")
         /* rect, squre, circle, triangle, oval*/
       },  
       size: {
-        random: true,  
+        random: false,  
         value: 5,
       },  
     },  
