@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
 
   $(".nav-link").on("click", function (e) {
@@ -9,32 +7,32 @@ $(document).ready(function () {
     $(this).addClass("active");
 
   });
-  
- $("#portfollio_lignbox_image").magnificPopup ({
-   delegate: "a",
-   type: "image",
- });
-//  $(".skill_bar_details").css("display","block");
-//  function openTab(key) {
-//    $(".skill_bar_details").hide();
-//    if (key=="html") {
-//      $(".skill_bar_details").hide();
-//      $("#html_des").show();
-//    }else if (key == "css") {
-//      $(".skill_bar_details").hide();
-//      $("#css_des").show();
-//    } else if (key === "js") {
-//      $(".skill_bar_details").hide();
-//      $("#js_des").show();
-//    } else if (key == "php") { 
-//      $(".skill_bar_details").hide();
-//      $("#php_des").show();
-//    } else {
-//      $(".skill_bar_details").hide();
-//      $("#html_des").show();
-//    }
-//  }
- 
+
+  $("#portfollio_lignbox_image").magnificPopup({
+    delegate: "a",
+    type: "image",
+  });
+  //  $(".skill_bar_details").css("display","block");
+  //  function openTab(key) {
+  //    $(".skill_bar_details").hide();
+  //    if (key=="html") {
+  //      $(".skill_bar_details").hide();
+  //      $("#html_des").show();
+  //    }else if (key == "css") {
+  //      $(".skill_bar_details").hide();
+  //      $("#css_des").show();
+  //    } else if (key === "js") {
+  //      $(".skill_bar_details").hide();
+  //      $("#js_des").show();
+  //    } else if (key == "php") { 
+  //      $(".skill_bar_details").hide();
+  //      $("#php_des").show();
+  //    } else {
+  //      $(".skill_bar_details").hide();
+  //      $("#html_des").show();
+  //    }
+  //  }
+
 
 });
 // function openTabContent(tabContent) {
@@ -44,7 +42,7 @@ $(document).ready(function () {
 //     for (let index = 0; index <= tab_content.length; index++) {
 //       const element = tab_content[index];
 //       console.log(element);
-      
+
 //     }
 
 //      if (tabContent == "home") {
@@ -71,24 +69,54 @@ $(document).ready(function () {
 //       $("#home").css("display","block");
 //      }
 
-     
+
 //   };
 
-  function filterItem($elemeent_name) {
-  };
+function filterItem($elemeent_name) {};
 
-function openNavButton () {
-  $(".nav_item").css({"left":"0px"});
+//open nav on mobile devices
+function openNavButton() {
+  $(".nav_item").css({
+    "left": "0px"
+  });
 };
 
+
+//close nav on mobule 
 function closeNavButton() {
-  $(".nav_item").css({"left":"-100%"})
+  $(".nav_item").css({
+    "left": "-100%"
+  })
 }
 
+//banner text changer 
+//text array
+let experience = ["coading", "developemnt", "desining", "programming", "solving"];
+let html_element = document.getElementsByClassName("coading")[0];
+let i = 1;
+
+function changeExperienceElement(pram) {
+  if (pram > 4) {
+    i = 0;
+  }
+  if (pram < 1) {
+    i = 3;
+  }
+
+  //console.log(pram - 1);
+  html_element.innerHTML = experience[pram - 1];
+}
+//call the function every 2 secound
+setInterval(() => {
+  changeExperienceElement(i += 1);
+}, 2000);
+
+
+
+//banner particles setting
 $("#particles-js")
   .particles()
-  .init(
-    {
+  .init({
       interactivity: {
         events: {
           onClick: {
@@ -137,7 +165,7 @@ $("#particles-js")
         links: {
           color: "#dd8d31",
           distance: 80,
-          enable:true,
+          enable: true,
           opacity: 0.5,
           width: 1,
         },
@@ -145,9 +173,9 @@ $("#particles-js")
           enable: true,
         },
         move: {
-          direction: "none",//none, row, colums
+          direction: "row", //none, row, colums
           enable: true,
-          outMode: "bounce",//bounce, 
+          outMode: "bounce", //bounce, 
           random: false,
           speed: 3,
           straight: false,
@@ -160,20 +188,20 @@ $("#particles-js")
           value: 80,
         },
         opacity: {
-          value: 0.5,
+          value: 1,
         },
         shape: {
           type: "triangle",
           /* rect, squre, circle, triangle, oval*/
         },
         size: {
-          random: true,
-          value: 5,
+          random: false,
+          value: 0,
         },
       },
-      detectRetina: false,
+      detectRetina: true,
     },
- 
+
   );
 
 
@@ -217,17 +245,21 @@ function plusSlides(n) {
 // }
 
 function showSlides(n) {
-  var a,b;
+  var a, b;
   var slides = document.getElementsByClassName("mySlides");
   // var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (a = 0; a < slides.length; a++) {
-      slides[a].style.display = "none";
+    slides[a].style.display = "none";
   }
-  for (b = 0; b < dots.length; b++) {
-      dots[b].className = dots[b].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
+  // for (b = 0; b < dots.length; b++) {
+  //   dots[b].className = dots[b].className.replace(" active", "");
+  // }
+  slides[slideIndex - 1].style.display = "block";
   // dots[slideIndex-1].className += " active";
 }

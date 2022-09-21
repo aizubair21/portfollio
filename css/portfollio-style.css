@@ -32,44 +32,36 @@ p {
 .download_btn {
   border-radius: 25px;
   border: 1px solid #dd8d31;
-  padding: 5px 10px;
-  width: 130px;
-  height: 45px;
-  line-height: 34px;
+  padding: 5px 25px;
   position: relative;
   background-color: #dd8d31;
   color: white;
   z-index: 1;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all linear 0.5s;
 }
 .download_btn::after {
-  content: "\21AA";
+  /* content: "\21AA"; */
   font-size: 25px;
   font-weight: 800;
-  line-height: 40px;
   text-align: center;
-  color: #dd8d31;
+  color: white;
   position: absolute;
   top: 50%;
-  right: -19px;
+  right: 5px;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 1px solid #dd8d31;
-  border-radius: 25px;
-  background-color: white;
-  box-shadow: 0px 0px 5px 1px white;
   z-index: 2;
 }
 .download_btn:hover {
-  background-color: white;
-  color: black;
+  padding-right:-10px;
+  color: white;
   transition: all linear 0.3s;
+  opacity: .7;
 }
 .download_btn:hover:after {
-  background-color: #dd8d31;
   color: white;
   transition: all linear 0.3s;
 }
@@ -195,6 +187,8 @@ a i {
   display: inline-block;
   position: relative;
   z-index: 2;
+  margin-bottom: 50px;
+  background-color: #dd8d315d;
 }
 #mainBody #banner #particles-js {
   position: absolute;
@@ -219,6 +213,30 @@ a i {
   justify-content: space-around;
   align-items: center;
 }
+#mainBody #banner .me, .coading {
+  display: inline-block;
+  font-size: 85px;
+  font-weight: 900;
+  font-family: sans-serif;
+  color: #dd8d31;
+}
+.middle {
+  padding: 5px 0px;
+  font-family: sans-serif;;
+  font-weight: 600;
+  line-height: 40px;
+}
+.coading {
+  font-size: 50px;
+  font-family: monospace;
+  letter-spacing: -2px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  padding: 13px;
+  background-color: #dd8d31;
+  color: white;
+  margin-left: 7px;
+}
 #mainBody #banner .banner_body .banner_disc {
   padding-bottom: 20px;
 }
@@ -234,18 +252,12 @@ a i {
 }
 #mainBody #banner .banner_body .banner_disc .over p {
   line-height: 15px;
+  padding: 10px 0px;
+  font-size: 30px;
+  color: black;
+  font-family: "oswald", sans-serif;
 }
-#mainBody #banner .banner_body .banner_disc .over .row {
-  padding: 50px 0px;
-}
-#mainBody #banner .banner_body .banner_disc .over .row .col-6 div {
-  border-bottom: 1px solid gray;
-}
-#mainBody #banner .banner_body .banner_disc .over .row strong {
-  color: #dd8d31;
-  text-transform: capitalize;
-  line-height: 35px;
-}
+
 #mainBody #banner .banner_body .banner_disc .over a {
   margin-top: 15px;
 }
@@ -349,6 +361,46 @@ a i {
   height: 105%;
   border: 1px solid #dd8d31;
 }
+
+
+/* about me sectio begain */
+#mainBody #about-me {
+  height: 80vh;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px;
+  background
+
+}
+/* #mainBody #about-me::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 150%;
+  height: 100%;
+  background-color: #dd8d31a1;
+  z-index: -1;
+  transform: rotateX(-4deg), rotate(3deg);
+  transform: translate(-50%) rotate(-5deg);
+} */
+#mainBody #about-me .row {
+  padding: 50px 0px;
+  z-index: 1;
+}
+#mainBody #about-me .row .col-6 div {
+  border-bottom: 1px solid gray;
+  z-index: 1;
+}
+#mainBody #about-me .row strong {
+  color: #dd8d31;
+  text-transform: capitalize;
+  line-height: 35px;
+  font-weight: 600;
+}
+/* about me sectio end */
+
+/* education section  */
 #mainBody #education {
   background-color: rgba(228, 211, 211, 0.822);
   padding: 50px 0px;

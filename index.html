@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,63 +36,62 @@
   <title>A.I. Zubair</title>
 </head>
 <body>
-<div id="mainBody">
-    <style>
-      #mouse-circle {
-        position:fixed;
-        top:0px;
-        left:0px;
-        width: 30px;
-        height: 30px;
-        border: 1px solid black;
-        border-radius: 50%;
-        transform: translate(-50%, -50%); 
-        background-color: transparent;
-        transition: all .6x ease-out;
-      }
-      #mouse-dot {
-        position: fixed;
-        top:0px;
-        left:0px;
-        width: 2px;
-        height: 2px;
-        background: black;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-      }
-    </style>
-    <div id="mouse-circle"></div>
-    <div id="mouse-dot"></div>
+  <div id="mainBody">
+  <!-- main menue -->
+    <nav>
+      <!-- <div id="tsparticles"></div> -->
+      <div class="overlay"></div>
+      <div class="container">
+        <div id="nav" class="row">
+          <div class="col-sm-2 logo">
+            <h2>ZUBAIR</h2>
+            <i class="fas fa-align-justify bg_block " onclick="openNavButton()"></i>
+          </div>
+          <div class="nav_item col-sm-10">
+            <div class="close_button bg_block" onclick="closeNavButton()">X</div>
+            <ul>
+              <li class=" nav-link"><a class="nav_active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
+              <!-- <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li> -->
+              <li class="nav-link" ><a href="/portfollio.html"> <i class="fas fa-image"></i> Portfollio </a></li>
+              <li class="nav-link" > <a href="#"> <i class="fas fa-pen"></i> Resume</a></li>
+              <li class="nav-link"><a href="/service"> <i class="fas fa-globe-asia"></i> Service</a></li>
+              <li class="nav-link" > <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
+              <li><a class="download_btn" href="#">View CV</a></li>
+            </ul>   
 
-
-    <div class="container">
-      <nav>
-        <!-- <div id="tsparticles"></div> -->
-        <div class="overlay"></div>
-        <div class="">
-          <div id="nav" class="row">
-            <div class="col-sm-2 logo">
-              <h2>ZUBAIR</h2>
-              <i class="fas fa-align-justify bg_block " onclick="openNavButton()"></i>
-            </div>
-            <div class="nav_item col-sm-10">
-              <div class="close_button bg_block" onclick="closeNavButton()">X</div>
-              <ul>
-                <li class=" nav-link"><a class="nav_active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
-                <!-- <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li> -->
-                <li class="nav-link" ><a href="/portfollio.html"> <i class="fas fa-image"></i> Portfollio </a></li>
-                <li class="nav-link" > <a href="#"> <i class="fas fa-pen"></i> Resume</a></li>
-                <li class="nav-link"><a href="/service"> <i class="fas fa-globe-asia"></i> Service</a></li>
-                <li class="nav-link" > <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
-                <li><a class="download_btn" href="#">View CV</a></li>
-              </ul>   
-
-            </div>
           </div>
         </div>
-      </nav>
-    </div>
-    <div id="banner" class="">
+      </div>
+    </nav>
+
+
+  <style>
+    #mouse-circle {
+      position:fixed;
+      top:0px;
+      left:0px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 50%;
+      transform: translate(-50%, -50%); 
+      background-color: transparent;
+      transition: all .6x ease-out;
+    }
+    #mouse-dot {
+      position: fixed;
+      top:0px;
+      left:0px;
+      width: 2px;
+      height: 2px;
+      background: black;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+  </style>
+  <div id="mouse-circle"></div>
+  <div id="mouse-dot"></div>
+  <div id="banner">
     <div id="particles-js"></div>
     <div class="container">
       <div class="banner_body row">
@@ -101,40 +99,8 @@
           <div>
             <div class="over">
               <div class="heading">
-                <h2>I am here With 2 year of exparience. </h2> 
-                <P>Creative Web Designer. </P>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <div>
-                    <strong>name : </strong>
-                    <p>A.I. Zubair</p>
-                  </div>
-                  <div>
-                    <strong>category :</strong>
-                    <p>Web Development</p>
-                  </div>
-
-                  <div>
-                    <strong>prefarence :</strong>
-                    <p>Earth Face</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div>
-                    <strong>address</strong>
-                    <p>Dhaka, Bangladesh.</p>
-                  </div>
-                  <div>
-                    <strong>contact</strong>
-                    <p>example112@gmail.com</p>
-                  </div>
-
-                  <div>
-                    <strong>language</strong>
-                    <p>English, Bangla</p>
-                  </div>
-                </div>
+                <h2> <span class="me">I'm</span> here With 2 year of <br><span class="coading">Coding </span>exparience </h2> 
+                <P>A PHP Web Developer. </P>
               </div>
               <a class="download_btn" style="width:150px">Download CV</a>
             </div> 
@@ -155,6 +121,68 @@
     
     </div> 
   </div>
+
+  <section id="about-me">
+    <div class="container">
+      <div class="aobut-body">
+
+        <!-- common heading -->
+        <div class="common_heading">
+          <h3>
+            This is ME
+          </h3>
+        </div>
+
+        <div class="row">
+
+          <!-- image -->
+          <div class="col-md-6">
+            <div class="aobut-image">
+              <img src="" alt="zubair | a php developer">
+            </div>
+          </div>
+
+          <!-- about details -->
+          <div class="col-md-6">
+            <div class="about-desc">
+              <div class="row">
+                <div class="col-6">
+                  <div>
+                    <strong>name : </strong>
+                    <p>Amimul Ihsan Zubair</p>
+                  </div>
+                  <div>
+                    <strong>category :</strong>
+                    <p>PHP Web Developer</p>
+                  </div>
+
+                  <div>
+                    <strong>prefarence :</strong>
+                    <p>Earth Face IT</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div>
+                    <strong>Experience</strong>
+                    <p>2 Years.</p>
+                  </div>
+                  <div>
+                    <strong>Framework</strong>
+                    <p>Laravel, Vue</p>
+                  </div>
+
+                  <div>
+                    <strong>language</strong>
+                    <p>English, Bangla</p>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div id="education">
     <div class="overlay"></div>
@@ -266,6 +294,8 @@
       </div>
 
       <div class="service_body">
+
+        <!-- top services -->
         <div class="row justify-content-center">
           <div class="col-sm-3 item wow fadeInDown">
             <div class="overlay">
@@ -290,8 +320,8 @@
             </div>
             <div class="card_inner">
               <div class="item_front" style="text-align: center;">
-                <strong> <i class="fas fa-brush"></i> </strong>
-                <h4>Graphics Design</h4>
+                <strong> <i class="fas fa-code"></i> </strong>
+                <h4>Web Development</h4>
                 <p>Lorem ipsum dolor Repellat.</p>
               </div>
               
@@ -308,8 +338,8 @@
             <div class="card_inner">
 
               <div class="item_front" style="text-align: center;">
-                <strong> <i class="fas fa-paint-brush"></i> </strong>
-                <h4>Logo Making</h4>
+                <strong> <i class="fab fa-android"></i> </strong>
+                <h4>App Development</h4>
                 <p>Lorem ipsum dolor Repellat.</p>
               </div>
 
@@ -317,6 +347,13 @@
                 <a href="#"><span class="style_button">Contact Me</span></a>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- bottom services -->
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-md-3">
+
           </div>
         </div>
       </div>
@@ -387,92 +424,12 @@
           </div>
 
           <div class="slider_des">
-            <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
+            <h3>Web Design <sup class="green">02|02|2022</sup> </h3>
             <p>Responsive website design.</p>
             
           </div>
         </div>
      </div>
-
-     <div class="row">
-
-
-      <div class="col-sm-3 all education blog ">
-        <div class="card">
-          <div class="card-top">
-            <a href="image/07.jpeg">
-              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
-            </a>
-          </div>
-          
-          <div class="card-body">
-            <h3 class="card-title">Responsibe website</h3>
-            <p class="card-text">
-              This is responsive website using HTML CSS and JS
-            </p>
-          </div>
-          
-          <a class="card-link btn btn-primary " href="#"> Full view</a>
-        </div>
-      </div>
-
-
-      <div class="col-sm-3 all blog management">
-        <div class="card">
-          <div class="card-top">
-            <a href="image/07.jpeg">
-              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
-            </a>
-          </div>
-          
-          <div class="card-body">
-            <h3 class="card-title">Responsibe website</h3>
-            <p class="card-text">
-              This is responsive website using HTML CSS and JS
-            </p>
-          </div>
-          <a class="card-link btn btn-primary " href="#"> Full view</a>
-        </div>
-      </div>
-
-      <div class="col-sm-3 all blog education">
-        <div class="card">
-          <div class="card-top">
-            <a href="image/07.jpeg">
-              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
-            </a>
-          </div>
-          
-          <div class="card-body">
-            <h3 class="card-title">Responsibe website</h3>
-            <p class="card-text">
-              This is responsive website using HTML CSS and JS
-            </p>
-          </div>
-          <a class="card-link btn btn-primary " href="#"> Full view</a>
-        </div>
-      </div>
-
-      <div class="col-sm-3 all ">
-        <div class="card">
-          <div class="card-top">
-            <a href="image/07.jpeg">
-              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
-            </a>
-          </div>
-          
-          <div class="card-body">
-            <h3 class="card-title">Responsibe website</h3>
-            <p class="card-text">
-              This is responsive website using HTML CSS and JS
-            </p>
-          </div>
-          <a class="card-link btn btn-primary " href="#"> Full view</a>
-        </div>
-      </div>
-
-     
-    </div>
 
      <div class="center p-5">
        <a class="download_btn" href="#">See more</a>
@@ -722,7 +679,7 @@
     dot.style.left =e.clientX+"px";
     dot.style.top = e.clientY+"px";
     dot.style.transition = "all .3s ease-out";
-    console.log(e.clientY);
+    // console.log(e.clientX, e.clientY);
   })
 </script>
 </body>

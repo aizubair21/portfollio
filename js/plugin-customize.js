@@ -4,95 +4,95 @@
 
 
 
-$("#particles-js")
-.particles()
-.init(
-  {
-    interactivity: {
-      events: {
-        onClick: {
-          enable: true,  
-          mode: "push",
-        },  
-        onHover: {
-          enable: true,  
-          mode: "grab",
-        },  
-        resize: true,
-      },  
-      modes: {
-        bubble: {
-          distance: 400,  
-          duration: 2,
-          opacity: 0.8,
-          size: 40,
-        },  
-        grab: {
-          distance: 150,  
-          line_linked: {
-            opacity: 1  
-          }  
-        },  
-        bubble: {
-          distance: 800,  
-          size: 80,
-          duration: 2,
-          opacity: 0.8,
-          speed: 3
-        },  
-        push: {
-          quantity: 4,  
-        },  
-        repulse: {
-          distance: 200,  
-          duration: 0.4,
-        },  
-      },  
-    },  
-    particles: {
-      color: {
-        value: "#dd8d31",  
-      },  
-      links: {
-        color: "#dd8d31",  
-        distance: 80,
-        enable:true,
-        opacity: 0.9,
-        width: 1,
-      },  
-      collisions: {
-        enable: true,  
-      },  
-      move: {
-        direction: "none",//none, row, colums  
-        enable: true,
-        outMode: "bounce",//bounce, 
-        random: true,
-        speed: 0,
-        straight: false,
-      },  
-      number: {
-        density: {
-          enable: true,  
-          area: 500,
-        },  
-        value: 70,
-      },  
-      opacity: {
-        value: 0.5,  
-      },  
-      shape: {
-        type: "triangle",  
-        /* rect, squre, circle, triangle, oval*/
-      },  
-      size: {
-        random: false,  
-        value: 5,
-      },  
-    },  
-    detectRetina: false,
-  },  
+// $("#particles-js")
+// .particles()
+// .init(
+//   {
+//     interactivity: {
+//       events: {
+//         onClick: {
+//           enable: true,  
+//           mode: "push",
+//         },  
+//         onHover: {
+//           enable: true,  
+//           mode: "grab",
+//         },  
+//         resize: true,
+//       },  
+//       modes: {
+//         bubble: {
+//           distance: 400,  
+//           duration: 2,
+//           opacity: 0.8,
+//           size: 40,
+//         },  
+//         grab: {
+//           distance: 150,  
+//           line_linked: {
+//             opacity: 1  
+//           }  
+//         },  
+//         bubble: {
+//           distance: 800,  
+//           size: 80,
+//           duration: 2,
+//           opacity: 0.8,
+//           speed: 3
+//         },  
+//         push: {
+//           quantity: 4,  
+//         },  
+//         repulse: {
+//           distance: 200,  
+//           duration: 0.4,
+//         },  
+//       },  
+//     },  
+//     particles: {
+//       color: {
+//         value: "#dd8d31",  
+//       },  
+//       links: {
+//         color: "#dd8d31",  
+//         distance: 80,
+//         enable:true,
+//         opacity: 0.9,
+//         width: 1,
+//       },  
+//       collisions: {
+//         enable: true,  
+//       },  
+//       move: {
+//         direction: "none",//none, row, colums  
+//         enable: true,
+//         outMode: "bounce",//bounce, 
+//         random: true,
+//         speed: 0,
+//         straight: false,
+//       },  
+//       number: {
+//         density: {
+//           enable: true,  
+//           area: 500,
+//         },  
+//         value: 70,
+//       },  
+//       opacity: {
+//         value: 0.5,  
+//       },  
+//       shape: {
+//         type: "triangle",  
+//         /* rect, squre, circle, triangle, oval*/
+//       },  
+//       size: {
+//         random: false,  
+//         value: 5,
+//       },  
+//     },  
+//     detectRetina: false,
+//   },  
 
-);  
+// );  
 
 
