@@ -7,23 +7,23 @@
   <link rel="icon" href="image/zubair-portfollio.jpg">
 
   <!-- vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    
-    <!--lightbox magnific popup-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+  
+  <!--lightbox magnific popup-->
+  <link rel="stylesheet" href="css/magnific-popup.css">
 
-    
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css">
-    
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
-    
-    <!-- wow animate css -->
-    <link rel="stylesheet" href="css/animate.css">
+  
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css">
+  
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+  
+  <!-- wow animate css -->
+  <link rel="stylesheet" href="css/animate.css">
 
-    <!-- jQuerry -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- jQuerry -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
 
   <link rel="stylesheet" href="css/animate.css">
@@ -38,34 +38,62 @@
 </head>
 <body>
 <div id="mainBody">
+    <style>
+      #mouse-circle {
+        position:fixed;
+        top:0px;
+        left:0px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        transition: all .6x ease-out;
+      }
+      #mouse-dot {
+        position: fixed;
+        top:0px;
+        left:0px;
+        width: 2px;
+        height: 2px;
+        background: black;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    </style>
+    <div id="mouse-circle"></div>
+    <div id="mouse-dot"></div>
 
-  <nav>
-    <div id="tsparticles"></div>
-    <div class="overlay"></div>
+
     <div class="container">
-      <div id="nav" class="row">
-        <div class="col-sm-2 logo">
-          <h2>ZUBAIR</h2>
-          <i class="fas fa-align-justify bg_block " onclick="openNavButton()"></i>
-        </div>
-        <div class="nav_item col-sm-10">
-          <div class="close_button bg_block" onclick="closeNavButton()">X</div>
-          <ul>
-            <li class=" nav-link"><a class="nav_active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
-            <!-- <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li> -->
-            <li class="nav-link" ><a href="/portfollio.html"> <i class="fas fa-image"></i> Portfollio </a></li>
-            <li class="nav-link" > <a href="#"> <i class="fas fa-pen"></i> Resume</a></li>
-            <li class="nav-link"><a href="/service"> <i class="fas fa-globe-asia"></i> Service</a></li>
-            <li class="nav-link" > <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
-            <li><a class="download_btn" href="#">View CV</a></li>
-          </ul>   
+      <nav>
+        <!-- <div id="tsparticles"></div> -->
+        <div class="overlay"></div>
+        <div class="">
+          <div id="nav" class="row">
+            <div class="col-sm-2 logo">
+              <h2>ZUBAIR</h2>
+              <i class="fas fa-align-justify bg_block " onclick="openNavButton()"></i>
+            </div>
+            <div class="nav_item col-sm-10">
+              <div class="close_button bg_block" onclick="closeNavButton()">X</div>
+              <ul>
+                <li class=" nav-link"><a class="nav_active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
+                <!-- <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li> -->
+                <li class="nav-link" ><a href="/portfollio.html"> <i class="fas fa-image"></i> Portfollio </a></li>
+                <li class="nav-link" > <a href="#"> <i class="fas fa-pen"></i> Resume</a></li>
+                <li class="nav-link"><a href="/service"> <i class="fas fa-globe-asia"></i> Service</a></li>
+                <li class="nav-link" > <a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
+                <li><a class="download_btn" href="#">View CV</a></li>
+              </ul>   
 
+            </div>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
-  </nav>
-  
-  <div id="banner" class="">
+    <div id="banner" class="">
     <div id="particles-js"></div>
     <div class="container">
       <div class="banner_body row">
@@ -178,7 +206,7 @@
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-sm-4 education_item class="animate__tada"">
+        <div class="col-sm-4 education_item class="animate__tada="">
           <div class="item item wow bounceIn">
             <i class=" fas fa-graduation-cap image_overlay">
 
@@ -317,7 +345,7 @@
 
      <div class="work_des row justify-content-evenly">
         <!-- Slideshow container -->
-        <div class="col-sm-4 slider_item">
+        <div class="col-sm-3 slider_item">
           <div class="image">
             <img src="image/mobile-view.png" alt="slider content">
           </div>
@@ -329,7 +357,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4 slider_item">
+        <div class="col-sm-3 slider_item">
           <div class="image">
             <img src="image/mobile-view.png" alt="slider content">
           </div>
@@ -341,7 +369,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4 slider_item">
+        <div class="col-sm-3 slider_item">
           <div class="image">
             <img src="image/mobile-view.png" alt="slider content">
           </div>
@@ -353,7 +381,7 @@
           </div>
         </div>
 
-        <!-- <div class="col-sm-4 slider_item">
+        <div class="col-sm-3 slider_item">
           <div class="image">
             <img src="image/mobile-view.png" alt="slider content">
           </div>
@@ -363,8 +391,88 @@
             <p>Responsive website design.</p>
             
           </div>
-        </div> -->
+        </div>
      </div>
+
+     <div class="row">
+
+
+      <div class="col-sm-3 all education blog ">
+        <div class="card">
+          <div class="card-top">
+            <a href="image/07.jpeg">
+              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
+            </a>
+          </div>
+          
+          <div class="card-body">
+            <h3 class="card-title">Responsibe website</h3>
+            <p class="card-text">
+              This is responsive website using HTML CSS and JS
+            </p>
+          </div>
+          
+          <a class="card-link btn btn-primary " href="#"> Full view</a>
+        </div>
+      </div>
+
+
+      <div class="col-sm-3 all blog management">
+        <div class="card">
+          <div class="card-top">
+            <a href="image/07.jpeg">
+              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
+            </a>
+          </div>
+          
+          <div class="card-body">
+            <h3 class="card-title">Responsibe website</h3>
+            <p class="card-text">
+              This is responsive website using HTML CSS and JS
+            </p>
+          </div>
+          <a class="card-link btn btn-primary " href="#"> Full view</a>
+        </div>
+      </div>
+
+      <div class="col-sm-3 all blog education">
+        <div class="card">
+          <div class="card-top">
+            <a href="image/07.jpeg">
+              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
+            </a>
+          </div>
+          
+          <div class="card-body">
+            <h3 class="card-title">Responsibe website</h3>
+            <p class="card-text">
+              This is responsive website using HTML CSS and JS
+            </p>
+          </div>
+          <a class="card-link btn btn-primary " href="#"> Full view</a>
+        </div>
+      </div>
+
+      <div class="col-sm-3 all ">
+        <div class="card">
+          <div class="card-top">
+            <a href="image/07.jpeg">
+              <img class="card-img-top w-100" src="image/07.jpeg" alt="strite   ">
+            </a>
+          </div>
+          
+          <div class="card-body">
+            <h3 class="card-title">Responsibe website</h3>
+            <p class="card-text">
+              This is responsive website using HTML CSS and JS
+            </p>
+          </div>
+          <a class="card-link btn btn-primary " href="#"> Full view</a>
+        </div>
+      </div>
+
+     
+    </div>
 
      <div class="center p-5">
        <a class="download_btn" href="#">See more</a>
@@ -562,17 +670,19 @@
       </div>
     </div>
   </footer>
-
+  
 </div>
 
+<!-- jquery -->
+<script src="JQuery/jquery-3.6.0.min.js"></script>
 
-  <!-- <img class="background-two" src="image/background.png" alt=""> -->
 <!-- bootstrap js -->
 <script src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
 <script src="bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
 
 
 <!-- plugin -->
+<!-- owlcarousel slider -->
 <script src="js/owl.carousel.min.js"></script>
 
 <!-- wow js -->
@@ -590,8 +700,6 @@
 <!-- magnific popup -->
 <script src="js/jquery-magnific-popup.min.js"></script>
 
-<!-- jquery -->
-<script src="JQuery/jquery-3.6.0.min.js"></script>
 
 <!-- wow js -->
 <script src="js/wow-min.js"></script>
@@ -602,6 +710,20 @@
 
 <script src="js/portfollio-script.js"></script>
 
+<script>
+  //for mouse integartion animation
+  let circle = document.getElementById("mouse-circle");
+  let dot = document.getElementById("mouse-dot");
+  document.addEventListener("mouseover", (e)=>{
 
+    circle.style.left =e.clientX+"px";
+    circle.style.top = e.clientY+"px";
+    circle.style.transition = "all .3s ease-out";
+    dot.style.left =e.clientX+"px";
+    dot.style.top = e.clientY+"px";
+    dot.style.transition = "all .3s ease-out";
+    console.log(e.clientY);
+  })
+</script>
 </body>
 </html>
