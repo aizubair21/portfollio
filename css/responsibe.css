@@ -4,7 +4,15 @@
     --black: black;
     --white: white;
 }
+
+
 @media  screen and (max-width:400px) {
+    #education{
+        margin-top:300px;
+    }
+    #my_work {
+        margin-top: 590px;
+    }
     .sm_none {
         display: none;
     }
@@ -20,8 +28,11 @@
         display: inline-block;
     }
     #mainBody nav {
-       
+       border: none;
+       width: 100%;
+       padding: 0px;
     }   
+
 
     #mainBody nav .overlay{
         /* position: absolute;
@@ -42,7 +53,6 @@
         font-size: 25px;
         background-color: var(--white);
         z-index: 99;
-        border: 1px solid;
         
     }
     #mainBody #nav .nav_item .close_button {
@@ -68,6 +78,10 @@
     }
     #banner .banner_body .image{
     
+    }
+
+    #contact .contact_body .right .email-field {
+        width: 100%;
     }
 }
 @media (min-width:401px) {

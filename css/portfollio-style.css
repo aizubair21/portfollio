@@ -1,9 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "roboto";
 }
+:root {
+  --primary : rgb(221, 141, 49);
+  --secoundry : rgb(204, 143, 74);
+  --black: black;
+  --white: white;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -70,8 +79,8 @@ p {
   padding: 30px 0px;
 }
 .common_heading h3 {
-  font-size: 25px;
-  font-family: "oswald";
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
   font-weight: 600;
   padding: 10px 0px;
   position: relative;
@@ -187,8 +196,18 @@ a i {
   display: inline-block;
   position: relative;
   z-index: 2;
-  margin-bottom: 50px;
-  background-color: #dd8d315d;
+}
+#mainBody #banner::after {
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  background-image: url("http://www.ecosys.net/wp-content/uploads/2020/06/1H-ecosys-background-pattern-full-width-fade-to-white-blue@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;;
 }
 #mainBody #banner #particles-js {
   position: absolute;
@@ -262,7 +281,7 @@ a i {
   margin-top: 15px;
 }
 #mainBody #banner .banner_body .image {
-  border: 10px solid #dd8d31;
+  border: 25px solid #dd8d31;
   border-radius: 10px;
   text-align: center;
   width: 400px;
@@ -321,7 +340,6 @@ a i {
 }
 #mainBody #banner .banner_body .image img {
   height: 100%;
-  width: 100% border: 10px solid #dd8d31;;
   border-radius: 5px;
   text-align: left;
   margin-left: -50px;
@@ -365,13 +383,31 @@ a i {
 
 /* about me sectio begain */
 #mainBody #about-me {
-  height: 80vh;
   position: relative;
   z-index: 1;
-  padding-bottom: 40px;
-  background
+  z-index: 2;
+  background-color: rgb(246,246,246);
+  /* filter: blur(50); */
 
 }
+#mainBody #about-me::after {
+  /* content: "https://www.edology.com/uploads/media/sulu-700x450/00/1720-blog-why-coding-is-so-important-for-IT-jobs-s.jpg?v=2-0"; */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("https://www.edology.com/uploads/media/sulu-700x450/00/1720-blog-why-coding-is-so-important-for-IT-jobs-s.jpg?v=2-0"); */
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: blur(20);
+  opacity: .4;
+
+}
+
 /* #mainBody #about-me::after {
   content: "";
   position: absolute;
@@ -384,8 +420,13 @@ a i {
   transform: rotateX(-4deg), rotate(3deg);
   transform: translate(-50%) rotate(-5deg);
 } */
+
+#mainBody #about-me .about-image {
+  overflow: hidden;
+}
 #mainBody #about-me .row {
-  padding: 50px 0px;
+  flex-direction: row-reverse;
+  padding: 0px;
   z-index: 1;
 }
 #mainBody #about-me .row .col-6 div {
@@ -405,6 +446,36 @@ a i {
   background-color: rgba(228, 211, 211, 0.822);
   padding: 50px 0px;
   position: relative;
+  z-index: 2;
+}
+#mainBody #education::after { 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("https://media.istockphoto.com/vectors/graduate-cap-logo-university-mortarboard-vector-id1205507976?k=20&m=1205507976&s=170667a&w=0&h=UaRkdeA6Ba-rdh4BMK54zoupH2R5gZ9o1H5eVIsN9pQ="); */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+}
+#mainBody #education .education-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+#mainBody #education .education-body .img {
+  border: 15px  solid #dd8d31;
+  border-radius: 50%;
+  transform:rotateX(20deg);
+  box-shadow: 20px 40px ;
+  
+}
+#mainBody #education .education-body .img img {
+  border-radius: 50%;
+  box-shadow: -10px -40px ;
 }
 #mainBody #education .row {
   margin: 5px;
@@ -583,19 +654,19 @@ a i {
 }
 #mainBody #service .my_add {
   position: absolute;
-  bottom: 10px;
-  left: o;
+  bottom: -25px;
+  left: 0px;
   width: 100%;
   height: auto;
   padding: 25px 0px ;
   background-color: gray;
-  transform: rotate(-3deg);
 }
 #mainBody #service .my_add .text {
   font-size: 20px;
   font-family: 'oswald';
   font-weight: 600;
   color: red;
+  padding: 10px;
 }
 #mainBody #skills {
   margin-top: 50px;
