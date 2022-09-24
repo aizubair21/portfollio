@@ -7,11 +7,13 @@
 
 
 @media  screen and (max-width:500px) {
-    #education{
-        margin-top:300px;
-    }
+  
     #my_work {
         margin-top: 590px;
+    }
+    #skills {
+        margin-top: 0px !important;
+        background-color: white !important;
     }
     .sm_none {
         display: none;
@@ -115,6 +117,20 @@
     }
 }
 
+
+#side-menu .close {
+    font-size: 36px;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+#side-menu {
+    z-index: 999999;
+}
 
 
 
