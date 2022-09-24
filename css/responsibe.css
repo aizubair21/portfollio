@@ -6,7 +6,7 @@
 }
 
 
-@media  screen and (max-width:400px) {
+@media  screen and (max-width:500px) {
     #education{
         margin-top:300px;
     }
@@ -15,6 +15,9 @@
     }
     .sm_none {
         display: none;
+    }
+    .coading {
+        display: block;
     }
     .logo{
         /* display: none; */
@@ -73,15 +76,37 @@
         width: 100%;
     }
 
-    #download_btn {
-        width: ;
-    }
-    #banner .banner_body .image{
-    
+    .download_btn {
+        margin: 20px auto;
     }
 
+    /* banner   */
+    #mainBody #banner {
+        text-align: center;
+    }
+    #mainBody #banner .banner_body .banner_disc .over h2 {
+        font-size: 30px;
+        /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+        text-align: center;
+    }
+
+
+    /* about me */
+    #mainBody #about-me {
+        text-align: center;
+    }
     #contact .contact_body .right .email-field {
         width: 100%;
+    }
+
+
+    /* add */
+    #mainBody #service .my_add {
+        display: none;
+    }
+
+    .mobile-none {
+        display: none;
     }
 }
 @media (min-width:401px) {

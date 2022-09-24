@@ -476,6 +476,7 @@ a i {
 #mainBody #education .education-body .img img {
   border-radius: 50%;
   box-shadow: -10px -40px ;
+  width: 100%;
 }
 #mainBody #education .row {
   margin: 5px;
@@ -748,7 +749,8 @@ a i {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) border: 1px solid black;;
+  transform: translate(-50%, -50%);
+   border: 1px solid black;;
 }
 @keyframes stroke {
   from {
