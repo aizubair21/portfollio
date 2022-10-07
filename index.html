@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/animate.css">
 
   <!-- jQuerry -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     
 
   <link rel="stylesheet" href="css/animate.css">
@@ -41,7 +41,7 @@
 </head>
 <body>
   <div id="mainBody">
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">WhoAmI</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,629 +63,602 @@
         </div>
       </div>
     </nav>
-  <!-- main menue -->
-    <nav class="d-none">
-      <!-- <div id="tsparticles"></div> -->
+    <!-- main menue -->
+  
+    <style>
+      #mouse-circle {
+        position:fixed;
+        top:0px;
+        left:0px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        transition: all .6x ease-out;
+      }
+      #mouse-dot {
+        position: fixed;
+        top:0px;
+        left:0px;
+        width: 2px;
+        height: 2px;
+        background: black;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    </style>
+
+    <div id="mouse-circle"></div>
+    <div id="mouse-dot"></div>
+    <div id="banner">
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="banner_body row">
+          <div class="banner_disc col-sm-6">
+            <div>
+              <div class="over">
+                <div class="heading">
+                  <h2> <span class="me">I'm</span> here With 2 year of <br><span class="coading">Coding </span>exparience </h2> 
+                  <P>A PHP Web Developer. </P>
+                </div>
+                <a class="download_btn" style="width:150px">Download CV</a>
+              </div> 
+
+            </div>
+          </div>
+
+          <div class="image col-sm-6 wow fadeInRight mobile-none">
+            <div class="overlay">
+              <i class="fas fa-image"></i>
+            </div>
+            <div class="image_container">
+              <img class="formar-image-one" src="image/main-avatar.png" alt="">
+            </div>
+            <!-- <img class="formar-image-two" src="image/portfolio-bg-2.png" alt=""> -->
+          </div>
+        </div>
+      
+      </div> 
+    </div>
+
+    <section id="about-me">
+      <div class="container">
+        <div class="aobut-body">
+
+          <!-- common heading -->
+          <div class="common_heading">
+            <h3>
+              This is ME
+            </h3>
+          </div>
+
+          <div class="row justify-content-center align-items-center">
+
+            <!-- image -->
+            <div class="col-md-6">
+              <div class="about-image">
+                <img class="mobile-none" src="https://www.seekpng.com/png/detail/838-8384218_particles-bg-triangle.png" alt="zubair | a php developer">
+              </div>
+            </div>
+
+            <!-- about details -->
+            <div class="col-md-6">
+              <div class="about-desc">
+
+                <!-- details table  -->
+                <div class="row">
+                  <div class="col-6">
+                    <div>
+                      <strong>name : </strong>
+                      <p>Amimul Ihsan Zubair</p>
+                    </div>
+                    <div>
+                      <strong>category :</strong>
+                      <p>PHP Web Developer</p>
+                    </div>
+
+                    <div>
+                      <strong>prefarence :</strong>
+                      <p>Earth Face IT</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div>
+                      <strong>Experience</strong>
+                      <p>2 Years.</p>
+                    </div>
+                    <div>
+                      <strong>Framework</strong>
+                      <p>Laravel, Vue</p>
+                    </div>
+
+                    <div>
+                      <strong>language</strong>
+                      <p>English, Bangla</p>
+                    </div>
+                  </div>
+                </div> 
+
+                <!-- description  -->
+                <div class="row">
+                  <div class="col-12 my-4">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugit consectetur. Ipsam cum excepturi nam velit quaerat repellendus, veritatis soluta ad blanditiis quo odio facilis officia, laborum reiciendis consequatur? Neque.
+                  </div>
+                  
+                  <div class="col-12">
+                    <button class="download_btn">Contact Me</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div id="education">
       <div class="overlay"></div>
       <div class="container">
-        <div id="nav" class="row d-none">
-          <div class="col-sm-2 logo">
-            <i class="fas fa-align-justify bg_block " onclick="openNavButton()"></i>
-          </div>
-          <div class="nav_item col-sm-10">
-            <div class="close_button bg_block" onclick="closeNavButton()">X</div>
-            <ul>
-              <li class=" nav-link"><a class="nav_active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
-              <!-- <li class="nav-link" > <a href="#"> <i class="fas fa-id-card"></i> About</a></li> -->
-              <li class="nav-link" ><a href="#my_work"> <i class="fas fa-image"></i> Portfollio </a></li>
-              <li class="nav-link" > <a href="#about_me"> <i class="fas fa-pen"></i> Resume</a></li>
-              <li class="nav-link"><a href="#service"> <i class="fas fa-globe-asia"></i> Service</a></li>
-              <li class="nav-link" > <a href="#contact"> <i class="fas fa-phone"></i> Contact</a></li>
-              <li><a class="download_btn" href="#">View CV</a></li>
-            </ul>   
-
-          </div>
-        </div>
-      </div>
-    </nav>
-
-
-  <style>
-    #mouse-circle {
-      position:fixed;
-      top:0px;
-      left:0px;
-      width: 30px;
-      height: 30px;
-      border: 1px solid black;
-      border-radius: 50%;
-      transform: translate(-50%, -50%); 
-      background-color: transparent;
-      transition: all .6x ease-out;
-    }
-    #mouse-dot {
-      position: fixed;
-      top:0px;
-      left:0px;
-      width: 2px;
-      height: 2px;
-      background: black;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-    }
-  </style>
-  <div id="mouse-circle"></div>
-  <div id="mouse-dot"></div>
-  <div id="banner">
-    <div id="particles-js"></div>
-    <div class="container">
-      <div class="banner_body row">
-        <div class="banner_disc col-sm-6">
-          <div>
-            <div class="over">
-              <div class="heading">
-                <h2> <span class="me">I'm</span> here With 2 year of <br><span class="coading">Coding </span>exparience </h2> 
-                <P>A PHP Web Developer. </P>
-              </div>
-              <a class="download_btn" style="width:150px">Download CV</a>
-            </div> 
-
-          </div>
-        </div>
-
-        <div class="image col-sm-6 wow fadeInRight mobile-none">
-          <div class="overlay">
-            <i class="fas fa-image"></i>
-          </div>
-          <div class="image_container">
-            <img class="formar-image-one" src="image/mirror.png" alt="">
-          </div>
-          <!-- <img class="formar-image-two" src="image/portfolio-bg-2.png" alt=""> -->
-        </div>
-      </div>
-    
-    </div> 
-  </div>
-
-  <section id="about-me">
-    <div class="container">
-      <div class="aobut-body">
-
-        <!-- common heading -->
         <div class="common_heading">
           <h3>
-            This is ME
+            Education Qualifications
           </h3>
         </div>
 
-        <div class="row justify-content-center align-items-center">
+        <!-- show more button  -->
+        <div class="d-flex justify-content-center">
+          <button class="style_button">
+            Show more
+          </button>
+        </div>
 
-          <!-- image -->
-          <div class="col-md-6">
-            <div class="about-image">
-              <img class="mobile-none" src="https://www.seekpng.com/png/detail/838-8384218_particles-bg-triangle.png" alt="zubair | a php developer">
-            </div>
+
+        <div class="education-body row">
+          <!-- left image -->
+          <div class="img col-lg-3 mobile-none">
+            <img class="" src="https://media.istockphoto.com/vectors/graduate-cap-logo-university-mortarboard-vector-id1205507976?k=20&m=1205507976&s=170667a&w=0&h=UaRkdeA6Ba-rdh4BMK54zoupH2R5gZ9o1H5eVIsN9pQ=" alt="">
           </div>
-
-          <!-- about details -->
-          <div class="col-md-6">
-            <div class="about-desc">
-
-              <!-- details table  -->
-              <div class="row">
-                <div class="col-6">
-                  <div>
-                    <strong>name : </strong>
-                    <p>Amimul Ihsan Zubair</p>
-                  </div>
-                  <div>
-                    <strong>category :</strong>
-                    <p>PHP Web Developer</p>
-                  </div>
-
-                  <div>
-                    <strong>prefarence :</strong>
-                    <p>Earth Face IT</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div>
-                    <strong>Experience</strong>
-                    <p>2 Years.</p>
-                  </div>
-                  <div>
-                    <strong>Framework</strong>
-                    <p>Laravel, Vue</p>
-                  </div>
-
-                  <div>
-                    <strong>language</strong>
-                    <p>English, Bangla</p>
-                  </div>
-                </div>
-              </div> 
-
-              <!-- description  -->
-              <div class="row">
-                <div class="col-12 my-4">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugit consectetur. Ipsam cum excepturi nam velit quaerat repellendus, veritatis soluta ad blanditiis quo odio facilis officia, laborum reiciendis consequatur? Neque.
+          <!-- right content -->
+          <div class="col-lg-9">
+            <div class="row justify-content-center">
+              <div class="col-md-5 education_item">
+                <div class="item wow bounceIn">
+                  <i class="  fas fa-graduation-cap image_overlay"></i>
                 </div>
                 
-                <div class="col-12">
-                  <button class="download_btn">Contact Me</button>
+                <div>
+                  <div class="overlay">
+                    <i class="fas fa-search image_overlay"></i>
+                  </div>
+                  <div class="des wow fadeInLeft ">
+                    <span>HSC (Alim) <i class="fas fa-star"></i> </span>
+                    <h4>TMKM, Tongi, Gazipur</h4>
+                    <p>Arts Gorup</p>
+                    <p>Passing Year - 2018</p>
+                  </div>
+                </div>
+      
+              </div>
+      
+              <div class="col-md-5 education_item" class="animate__tada">
+                <div class="item item wow bounceIn">
+                  <i class="  fas fa-graduation-cap image_overlay"></i>
+                </div>
+      
+                <div>
+                  <div class="overlay">
+                    <i class="fas fa-search image_overlay"></i>
+                  </div>
+                  <div class="des wow fadeInLeft">
+                    <span>SSC (Dakhil) </span>
+                    <h4>Lalmohan Kamil Madrasha, Lalmohan</h4>
+                    <p>Science Group</p>
+                    <p>passing Year - 2016</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-md-5 education_item class="animate__tada="">
+                <div class="item item wow bounceIn">
+                  <i class=" fas fa-graduation-cap image_overlay">
+      
+                  </i>
+                </div>
+                
+                <div>
+                  <div class="overlay">
+                    <i class="fas fa-search image_overlay"></i>
+                  </div>
+                  <div class="des wow fadeInLeft">
+                    <span>HSC (Alim)</span>
+                    <h4>TMKM, Tongi, Gazipur</h4>
+                    <p>Arts Gorup</p>
+                    <p>Passing Year - 2018</p>
+                  </div>
+                </div>
+      
+              </div>
+      
+              <div class="col-md-5 education_item class="animate__tada"">
+                <div class="item  item wow bounceIn">
+                  <i class=" animate__animated animate__bounce fas fa-graduation-cap image_overlay"></i>
+                </div>
+      
+                <div>
+                  <div class="overlay">
+                    <i class="fas fa-search image_overlay"></i>
+                  </div>
+                  <div class="des wow fadeInLeft">
+                    <span> BA </span>
+                    <h4>Islamic University, Kushtia</h4>
+                    <p>Dipt:: of DIS</p>
+                    <p> Now Reading</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <section id="service" >
+      <div class="container">
+        <div class="common_heading">
+          <button class="style_button"> See More</button>
+          <h3>My Service Point</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, velit. 
+          </p>
+        </div>
+
+        <div class="service_body">
+          <!-- skill to make Fully Dynamic Webiste, Backend Php, Laravel Framework, E-commerce, including Slider, Corporate Website, Portfollio, Bloging, News, Q&A website, Website for your Busines, Product showing, Library, -->
+          <!-- softwar -->
+          <!-- top services -->
+          <div class="row justify-content-center">
+            <div class="col-sm-3 item wow fadeInDown">
+              <div class="overlay">
+                <i class="image_overlay">01</i>
+              </div>
+              <div class="card_inner">
+                <div class="item_front" style="text-align: center;">
+                  <strong> <i class="fas fa-code"></i> </strong>
+                  <h4>Web Development</h4>
+                  <p>Lorem ipsum dolor Repellat.</p>
+                </div>
+                
+                <div class="hover_overlay">
+                  <a href="#"><span class="style_button">Contact Me</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 item wow fadeInUp">
+              <div class="overlay">
+                <i class="image_overlay">02</i>
+              </div>
+              <div class="card_inner">
+                <div class="item_front" style="text-align: center;">
+                  <strong> <i class="fas fa-code"></i> </strong>
+                  <h4>Web Development</h4>
+                  <p>Lorem ipsum dolor Repellat.</p>
+                </div>
+                
+                <div class="hover_overlay">
+                  <a href="#"><span class="style_button">Contact Me</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 item wow fadeInDown">
+              <div class="overlay">
+                <i class=" image_overlay">03</i>
+              </div>
+              <div class="card_inner">
+
+                <div class="item_front" style="text-align: center;">
+                  <strong> <i class="fab fa-android"></i> </strong>
+                  <h4>App Development</h4>
+                  <p>Lorem ipsum dolor Repellat.</p>
+                </div>
+
+                <div class="hover_overlay">
+                  <a href="#"><span class="style_button">Contact Me</span></a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- bottom services -->
+          <div class="row justify-content-center align-items-center ">
+            <div class="col-md-3">
+
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- add -->
+      <div class="my_add">
+        <div class="container">
+          <div class="d-flex justify-content-evenly align-items-center">
+            <div class="text">
+              If you have any development
+            </div>
+            <div>
+              <a href="#contact" class="style_button">contact with me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- add end  -->
+    </section>
+
+  <section id="my_work">
+    <div class="container">
+      <div class="common_heading">
+        <h3>My Work</h3>
+        <p>See What & How loock about my design. It's a breaffe discription. for more info check "more" button.</p>
+      </div>
+
+      <div class="work_des row justify-content-evenly">
+          <!-- Slideshow container -->
+          <!-- web Development, Web Design, Web Customize, PSD To Code, JS Integration, Bug Fixed, Update Content, Change layout, Add Service, Landing Page, PHP Backend, mySql Database, Custome Website, Free Made Template, Website Clone with Functionality, Fully Daynamic Website -->
+          <div class="col-sm-3 slider_item">
+            <div class="image">
+              <img src="image/mobile-view.png" alt="slider content">
+            </div>
+
+            <div class="slider_des">
+              <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
+              <p>Responsive website design.</p>
+              
+            </div>
+          </div>
+
+          <div class="col-sm-3 slider_item">
+            <div class="image">
+              <img src="image/mobile-view.png" alt="slider content">
+            </div>
+
+            <div class="slider_des">
+              <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
+              <p>Responsive website design.</p>
+              
+            </div>
+          </div>
+
+          <div class="col-sm-3 slider_item">
+            <div class="image">
+              <img src="image/mobile-view.png" alt="slider content">
+            </div>
+
+            <div class="slider_des">
+              <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
+              <p>Responsive website design.</p>
+              
+            </div>
+          </div>
+
+          <div class="col-sm-3 slider_item">
+            <div class="image">
+              <img src="image/mobile-view.png" alt="slider content">
+            </div>
+
+            <div class="slider_des">
+              <h3>Web Design <sup class="green">02|02|2022</sup> </h3>
+              <p>Responsive website design.</p>
+              
+            </div>
+          </div>
+      </div>
+
+      <div class="center p-5">
+        <a class="download_btn" href="#">See more</a>
       </div>
     </div>
   </section>
-  
-  
-  <div id="education">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="common_heading">
-        <h3>
-          Education Qualifications
-        </h3>
-      </div>
 
-      <!-- show more button  -->
-      <div class="d-flex justify-content-center">
-        <button class="style_button">
-          Show more
-        </button>
-      </div>
-
-
-      <div class="education-body row">
-        <!-- left image -->
-        <div class="img col-lg-3 mobile-none">
-          <img class="" src="https://media.istockphoto.com/vectors/graduate-cap-logo-university-mortarboard-vector-id1205507976?k=20&m=1205507976&s=170667a&w=0&h=UaRkdeA6Ba-rdh4BMK54zoupH2R5gZ9o1H5eVIsN9pQ=" alt="">
+    <section id="skills">
+      <div class="container">
+        <div class="common_heading">
+          <h3>My Skills</h3>
+          <p>At accusamus sapiente vel incidunt exercitationem pariatur quibusdam perspiciatis quis obcaecati reprehenderit!</p>
         </div>
-        <!-- right content -->
-        <div class="col-lg-9">
-          <div class="row justify-content-center">
-            <div class="col-md-5 education_item">
-              <div class="item wow bounceIn">
-                <i class="  fas fa-graduation-cap image_overlay"></i>
+
+        <!-- skill to make Fully Dynamic Webiste, Backend Php, Laravel Framework, E-commerce, including Slider, Corporate Website, Portfollio, Bloging, News, Q&A website, Website for your Busines, Product showing, Library, -->
+        <!-- software, Invertory Management, Office management with Branch, E-commerce, Educational office management, Reasult Sheet, Student Management System, Business manage, For your company,  -->
+
+        <div id="skills_bar" class="row">
+          <div class=" col-sm-4 skill_image  ">
+            <img src="image/ami.jpeg" alt="">
+          </div>
+          <div class="skill_item col-sm-8">
+            <div class="skill_des">
+              
+              <!-- Tab content -->
+              <div id="London" class="tabcontent">
+                <h3>HTML</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+
+              <div id="Paris" class="tabcontent">
+                <h3>CSS</h3>
+                <p>Paris is the capital of France.</p>
+              </div>
+
+              <div id="Tokyo" class="tabcontent">
+                <h3>JS</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+
+              <div id="Singapur" class="tabcontent">
+                <h3>PHP</h3>
+                <p>Singapur is the capital of Japan.</p>
               </div>
               
-              <div>
-                <div class="overlay">
-                  <i class="fas fa-search image_overlay"></i>
-                </div>
-                <div class="des wow fadeInLeft ">
-                  <span>HSC (Alim) <i class="fas fa-star"></i> </span>
-                  <h4>TMKM, Tongi, Gazipur</h4>
-                  <p>Arts Gorup</p>
-                  <p>Passing Year - 2018</p>
-                </div>
-              </div>
-    
             </div>
-    
-            <div class="col-md-5 education_item" class="animate__tada">
-              <div class="item item wow bounceIn">
-                <i class="  fas fa-graduation-cap image_overlay"></i>
-              </div>
-    
-              <div>
-                <div class="overlay">
-                  <i class="fas fa-search image_overlay"></i>
+            <div class="row">
+              <div class="col-3">
+                <div class="skill_bar">
+                  <h4 class="tablinks" onclick="openTab('London')"> HTML</h4>
+                  <div class="skill_circle">
+                    <p>80%</p>
+                  </div>
                 </div>
-                <div class="des wow fadeInLeft">
-                  <span>SSC (Dakhil) </span>
-                  <h4>Lalmohan Kamil Madrasha, Lalmohan</h4>
-                  <p>Science Group</p>
-                  <p>passing Year - 2016</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-md-5 education_item class="animate__tada="">
-              <div class="item item wow bounceIn">
-                <i class=" fas fa-graduation-cap image_overlay">
-    
-                </i>
               </div>
               
-              <div>
-                <div class="overlay">
-                  <i class="fas fa-search image_overlay"></i>
-                </div>
-                <div class="des wow fadeInLeft">
-                  <span>HSC (Alim)</span>
-                  <h4>TMKM, Tongi, Gazipur</h4>
-                  <p>Arts Gorup</p>
-                  <p>Passing Year - 2018</p>
+              <div class="col-3">
+                <div class="skill_bar css_skill">
+                  <h4 class="tablinks" onclick="openTab('Paris')">CSS</h4>
+                  <div class="skill_circle">
+                    <p class="w-80">80%</p>
+                  </div>
                 </div>
               </div>
-    
-            </div>
-    
-            <div class="col-md-5 education_item class="animate__tada"">
-              <div class="item  item wow bounceIn">
-                <i class=" animate__animated animate__bounce fas fa-graduation-cap image_overlay"></i>
-              </div>
-    
-              <div>
-                <div class="overlay">
-                  <i class="fas fa-search image_overlay"></i>
+              
+              <div class="col-3">
+                <div class="skill_bar">
+                  <h4 class="tablinks" onclick="openTab('Tokyo')">JS</h4>
+                  <div class="skill_circle">
+                    <p class="70">70%</p>
+                  </div>
                 </div>
-                <div class="des wow fadeInLeft">
-                  <span> BA </span>
-                  <h4>Islamic University, Kushtia</h4>
-                  <p>Dipt:: of DIS</p>
-                  <p> Now Reading</p>
+              </div>
+              
+              <div class="col-3">
+                <div class="skill_bar">
+                <h4 class="tablinks" onclick="openTab('Singapur')">PHP</h4>
+                <div class="skill_circle">
+                  <p class="w-50">50%</p>
                 </div>
               </div>
             </div>
+            <a class="style_button" href="#">See more</a>
+          
           </div>
-
-
+            
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="common_heading">
+          <h3>Contact with ME</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, voluptas?</p>
+        </div>
+
+        <div class="contact_body">
+          <div class="row">
+            <div class="col-sm-6 left">
+              <div class="">
+                <h3 class=" direct_contact" >Dirrect Contact</h3>
+                <ul>
+                  <li> <i class="fas fa-phone-alt p-3"></i> 07198-667580 </li>
+                  <li><div click="copyElement"> <i class="fas fa-envelope p-3"></i> loremipsum@gmail.com</div></li>
+                </ul>
+              </div>
+              <div class="ifrem_body">
+                <div class="mapouter">
+                  <div class=" p-5 gmap_canvas center border-2">
+                    <iframe width="500" height="300" fid="gmap_canvas" src="https://maps.google.com/maps?q=islamic%20university&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="5" scrolling="yes" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:center;height:300px;width:6
+                      500px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+              </div>
+            </div>
+            <div class="col-sm-6 right d-block ">
+              <h3 class=" direct_contact">Sent me an E-mail </h3>
+              
+              <div class="email-fleld" style="width:350px;margin: 20px auto;height: 100%;">
+                <form class="row">
+                  <div class="col-md-4 w-50 py-3">
+                    <label for="input_name" class="form-label">Your Name : </label>
+                    <input type="text" class="form-control" id="input_name" placeholder="Lorem Ipsum" required>
+                  </div>
+                  <div class="col-md-4 w-50 py-3">
+                    <label for="input_phone" class="form-label">Your Phone :</label>
+                    <input type="phone" placeholder="0123456789" max="11" class="form-control" id="input_phone" required>
+                  </div>
+                  <div class="col-md-12 w-100 py-3">
+                    <label for="input_email" class="form-label">E-Mail : </label>
+                    <div class="input-group">
+                      <!-- <span class="input-group-text" id="inputGroupPrepend2">@</span> -->
+                      <input type="email" class="form-control" id="input_email"  aria-describedby="inputGroupPrepend2" placeholder="example@gmail.com" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12 d-block">
+                    <div><label for="validationDefault03" class="form-label">Message</label></div>
+                    <textarea name="message" id="message" placeholder="Write here........." cols="40" rows="5" required style="padding: 10px"></textarea>
+                  </div> 
+                  <div class="col-12">
+                    <div class="form-check py-3">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Sent to me >> </button>
+                  </div>
+                </form>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       
+    </section>
 
-    </div>
-  </div>
-
-  <section id="service" >
-    <div class="container">
-      <div class="common_heading">
-        <button class="style_button"> See More</button>
-        <h3>My Service Point</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, velit. 
-        </p>
-      </div>
-
-      <div class="service_body">
-        <!-- skill to make Fully Dynamic Webiste, Backend Php, Laravel Framework, E-commerce, including Slider, Corporate Website, Portfollio, Bloging, News, Q&A website, Website for your Busines, Product showing, Library, -->
-        <!-- softwar -->
-        <!-- top services -->
-        <div class="row justify-content-center">
-          <div class="col-sm-3 item wow fadeInDown">
-            <div class="overlay">
-              <i class="image_overlay">01</i>
-            </div>
-            <div class="card_inner">
-              <div class="item_front" style="text-align: center;">
-                <strong> <i class="fas fa-code"></i> </strong>
-                <h4>Web Development</h4>
-                <p>Lorem ipsum dolor Repellat.</p>
-              </div>
-              
-              <div class="hover_overlay">
-                <a href="#"><span class="style_button">Contact Me</span></a>
-              </div>
-            </div>
+    <footer>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="heading">
+            Who am i
           </div>
 
-          <div class="col-sm-3 item wow fadeInUp">
-            <div class="overlay">
-              <i class="image_overlay">02</i>
-            </div>
-            <div class="card_inner">
-              <div class="item_front" style="text-align: center;">
-                <strong> <i class="fas fa-code"></i> </strong>
-                <h4>Web Development</h4>
-                <p>Lorem ipsum dolor Repellat.</p>
-              </div>
-              
-              <div class="hover_overlay">
-                <a href="#"><span class="style_button">Contact Me</span></a>
-              </div>
-            </div>
-          </div>
+          <div class="footer_des">
 
-          <div class="col-sm-3 item wow fadeInDown">
-            <div class="overlay">
-              <i class=" image_overlay">03</i>
-            </div>
-            <div class="card_inner">
-
-              <div class="item_front" style="text-align: center;">
-                <strong> <i class="fab fa-android"></i> </strong>
-                <h4>App Development</h4>
-                <p>Lorem ipsum dolor Repellat.</p>
-              </div>
-
-              <div class="hover_overlay">
-                <a href="#"><span class="style_button">Contact Me</span></a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- bottom services -->
-        <div class="row justify-content-center align-items-center ">
-          <div class="col-md-3">
+        <div class="col-sm-3">
+          <div class="heading">
+            Links
+          </div>
 
+          <div class="footer_des">  
+
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="heading">
+            Contact
+          </div>
+
+          <div class="footer_des">
+            <div class="icon">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- add -->
-    <div class="my_add">
-      <div class="container">
-        <div class="d-flex justify-content-evenly align-items-center">
-          <div class="text">
-            If you have any development
-          </div>
-          <div>
-            <a href="#contact" class="style_button">contact with me</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- add end  -->
-  </section>
-
- <section id="my_work">
-   <div class="container">
-     <div class="common_heading">
-       <h3>My Work</h3>
-       <p>See What & How loock about my design. It's a breaffe discription. for more info check "more" button.</p>
-     </div>
-
-     <div class="work_des row justify-content-evenly">
-        <!-- Slideshow container -->
-        <!-- web Development, Web Design, Web Customize, PSD To Code, JS Integration, Bug Fixed, Update Content, Change layout, Add Service, Landing Page, PHP Backend, mySql Database, Custome Website, Free Made Template, Website Clone with Functionality, Fully Daynamic Website -->
-        <div class="col-sm-3 slider_item">
-          <div class="image">
-            <img src="image/mobile-view.png" alt="slider content">
-          </div>
-
-          <div class="slider_des">
-            <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
-            <p>Responsive website design.</p>
-            
-          </div>
-        </div>
-
-        <div class="col-sm-3 slider_item">
-          <div class="image">
-            <img src="image/mobile-view.png" alt="slider content">
-          </div>
-
-          <div class="slider_des">
-            <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
-            <p>Responsive website design.</p>
-            
-          </div>
-        </div>
-
-        <div class="col-sm-3 slider_item">
-          <div class="image">
-            <img src="image/mobile-view.png" alt="slider content">
-          </div>
-
-          <div class="slider_des">
-            <h3>Web Development <sup class="green">02|02|2022</sup> </h3>
-            <p>Responsive website design.</p>
-            
-          </div>
-        </div>
-
-        <div class="col-sm-3 slider_item">
-          <div class="image">
-            <img src="image/mobile-view.png" alt="slider content">
-          </div>
-
-          <div class="slider_des">
-            <h3>Web Design <sup class="green">02|02|2022</sup> </h3>
-            <p>Responsive website design.</p>
-            
-          </div>
-        </div>
-     </div>
-
-     <div class="center p-5">
-       <a class="download_btn" href="#">See more</a>
-     </div>
-   </div>
- </section>
-
-
-  <section id="skills">
-    <div class="container">
-      <div class="common_heading">
-        <h3>My Skills</h3>
-        <p>At accusamus sapiente vel incidunt exercitationem pariatur quibusdam perspiciatis quis obcaecati reprehenderit!</p>
-      </div>
-
-      <!-- skill to make Fully Dynamic Webiste, Backend Php, Laravel Framework, E-commerce, including Slider, Corporate Website, Portfollio, Bloging, News, Q&A website, Website for your Busines, Product showing, Library, -->
-      <!-- software, Invertory Management, Office management with Branch, E-commerce, Educational office management, Reasult Sheet, Student Management System, Business manage, For your company,  -->
-
-      <div id="skills_bar" class="row">
-        <div class=" col-sm-4 skill_image  ">
-          <img src="image/ami.jpeg" alt="">
-        </div>
-        <div class="skill_item col-sm-8">
-          <div class="skill_des">
-            
-            <!-- Tab content -->
-            <div id="London" class="tabcontent">
-              <h3>HTML</h3>
-              <p>London is the capital city of England.</p>
-            </div>
-
-            <div id="Paris" class="tabcontent">
-              <h3>CSS</h3>
-              <p>Paris is the capital of France.</p>
-            </div>
-
-            <div id="Tokyo" class="tabcontent">
-              <h3>JS</h3>
-              <p>Tokyo is the capital of Japan.</p>
-            </div>
-
-            <div id="Singapur" class="tabcontent">
-              <h3>PHP</h3>
-              <p>Singapur is the capital of Japan.</p>
-            </div>
-            
-          </div>
-          <div class="row">
-            <div class="col-3">
-              <div class="skill_bar">
-                <h4 class="tablinks" onclick="openTab('London')"> HTML</h4>
-                <div class="skill_circle">
-                  <p>80%</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-3">
-              <div class="skill_bar css_skill">
-                <h4 class="tablinks" onclick="openTab('Paris')">CSS</h4>
-                <div class="skill_circle">
-                  <p class="w-80">80%</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-3">
-              <div class="skill_bar">
-                <h4 class="tablinks" onclick="openTab('Tokyo')">JS</h4>
-                <div class="skill_circle">
-                  <p class="70">70%</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-3">
-              <div class="skill_bar">
-              <h4 class="tablinks" onclick="openTab('Singapur')">PHP</h4>
-              <div class="skill_circle">
-                <p class="w-50">50%</p>
-              </div>
-            </div>
-          </div>
-          <a class="style_button" href="#">See more</a>
-        
-        </div>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="common_heading">
-        <h3>Contact with ME</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, voluptas?</p>
-      </div>
-
-      <div class="contact_body">
-        <div class="row">
-          <div class="col-sm-6 left">
-            <div class="">
-              <h3 class=" direct_contact" >Dirrect Contact</h3>
-              <ul>
-                <li> <i class="fas fa-phone-alt p-3"></i> 07198-667580 </li>
-                <li><div click="copyElement"> <i class="fas fa-envelope p-3"></i> loremipsum@gmail.com</div></li>
-              </ul>
-            </div>
-            <div class="ifrem_body">
-              <div class="mapouter">
-                <div class=" p-5 gmap_canvas center border-2">
-                  <iframe width="500" height="300" fid="gmap_canvas" src="https://maps.google.com/maps?q=islamic%20university&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="5" scrolling="yes" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:center;height:300px;width:6
-                    500px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
-             </div>
-          </div>
-          <div class="col-sm-6 right d-block ">
-            <h3 class=" direct_contact">Sent me an E-mail </h3>
-            
-            <div class="email-fleld" style="width:350px;margin: 20px auto;height: 100%;">
-              <form class="row">
-                <div class="col-md-4 w-50 py-3">
-                  <label for="input_name" class="form-label">Your Name : </label>
-                  <input type="text" class="form-control" id="input_name" placeholder="Lorem Ipsum" required>
-                </div>
-                <div class="col-md-4 w-50 py-3">
-                  <label for="input_phone" class="form-label">Your Phone :</label>
-                  <input type="phone" placeholder="0123456789" max="11" class="form-control" id="input_phone" required>
-                </div>
-                <div class="col-md-12 w-100 py-3">
-                  <label for="input_email" class="form-label">E-Mail : </label>
-                  <div class="input-group">
-                    <!-- <span class="input-group-text" id="inputGroupPrepend2">@</span> -->
-                    <input type="email" class="form-control" id="input_email"  aria-describedby="inputGroupPrepend2" placeholder="example@gmail.com" required>
-                  </div>
-                </div>
-                <div class="col-md-12 d-block">
-                  <div><label for="validationDefault03" class="form-label">Message</label></div>
-                  <textarea name="message" id="message" placeholder="Write here........." cols="40" rows="5" required style="padding: 10px"></textarea>
-                </div> 
-                <div class="col-12">
-                  <div class="form-check py-3">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                    <label class="form-check-label" for="invalidCheck2">
-                      Agree to terms and conditions
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Sent to me >> </button>
-                </div>
-              </form>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    
-  </section>
-
-
-  <footer>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="heading">
-          Who am i
-        </div>
-
-        <div class="footer_des">
-
-        </div>
-      </div>
-
-      <div class="col-sm-3">
-        <div class="heading">
-          Links
-        </div>
-
-        <div class="footer_des">  
-
-        </div>
-      </div>
-
-      <div class="col-sm-3">
-        <div class="heading">
-          Contact
-        </div>
-
-        <div class="footer_des">
-          <div class="icon">
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
   
 </div>
 
@@ -724,24 +697,36 @@
 
 <script src="js/plugin-customize.js"></script>
 
-<script src="js/tsparticles.js"></script>
+<!-- <script src="js/tsparticles.js"></script> -->
 
 <script src="js/portfollio-script.js"></script>
 
 <script>
   //for mouse integartion animation
+
   let circle = document.getElementById("mouse-circle");
   let dot = document.getElementById("mouse-dot");
-  document.addEventListener("mouseover", (e)=>{
+  // document.body.addEventListener("on", (e)=>{
 
-    circle.style.left =e.clientX+"px";
-    circle.style.top = e.clientY+"px";
-    circle.style.transition = "all .3s ease-out";
-    dot.style.left =e.clientX+"px";
-    dot.style.top = e.clientY+"px";
-    dot.style.transition = "all .3s ease-out";
-    // console.log(e.clientX, e.clientY);
-  })
+  //   circle.style.left =e.clientX+"px";
+  //   circle.style.top = e.clientY+"px";
+  //   circle.style.transition = "all .3s ease-out";
+  //   dot.style.left =e.clientX+"px";
+  //   dot.style.top = e.clientY+"px";
+  //   dot.style.transition = "all .3s ease-out";
+  //   console.log(e.clientX, e.clientY);
+  // })
+  $(document).load(
+    $("#mainBody").on("mouseover",(e)=>{
+      circle.style.left =e.clientX+"px";
+      circle.style.top = e.clientY+"px";
+      circle.style.transition = "all .3s ease-out";
+      dot.style.left =e.clientX+"px";
+      dot.style.top = e.clientY+"px";
+      dot.style.transition = "all .3s ease-out";
+      console.log(e.clientX, e.clientY);
+    })
+  )
 </script>
 </body>
 </html>
