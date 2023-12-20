@@ -1244,7 +1244,7 @@ input[type=text],
     padding: 0
 }
 
-.skills-second-style .skill-container.skill-1 .skill-percentage {
+/* .skills-second-style .skill-container.skill-1 .skill-percentage {
     width: 95%
 }
 
@@ -1278,7 +1278,7 @@ input[type=text],
 
 .skills-second-style .skill-container.skill-9 .skill-percentage {
     width: 90%
-}
+} */
 
 .pt-page .skills-second-style .skill-percentage,
 .pt-page .skills-second-style .skill-value {
